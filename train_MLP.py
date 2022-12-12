@@ -26,6 +26,7 @@ parser.add_argument("--validation_filenames", default=['/home/jofre/Students/Nur
 parser.add_argument("--spatial_dimension", default=[128,128,128], type=list, help="Spatial discretization, grid of statistics data. Equals the shape of the stored quantities in 'statistic")
 parser.add_argument("--num_hidden_layers", default=20, type=int, help="Number of hidden layers of the model")
 parser.add_argument("--num_neurons_per_layer", default=20, type=int, help="Number of neurons per layer of the model")
+parser.add_argument("--activation_function", default="relu", type=str, help="Activation function (relu, tanh)")
 parser.add_argument("--num_epochs", default=500, type=int, help="Number of training epochs")
 parser.add_argument("--visualization_step", default=10, type=int, help="") # TODO
 
@@ -73,6 +74,7 @@ print(f"\nShape training features: {features_tr.shape}")
 print(f"Shape training targets: {targets_tr.shape}")
 
 # Model: Multi-Layer Perceptron
+"""
 class MLP(models.Model):
     def __init__(self, model, optimizer, sopt=None, epochs=100, **kwargs):
         super(MLP, self).__init__(**kwargs)
@@ -109,17 +111,16 @@ class MLP(models.Model):
             
         # --> training using L-BFGS-B optimizer
         # objective function for Scipy (L-BFGS-B) optimizer
-        """
-        def func(params_1d):
-            self.sopt.assign_params(params_1d)
-            tf.print('epoch:', self.epoch)
-            loss, grads = self.train_step(x, y_gt)
-            grads = tf.dynamic_stitch(self.sopt.idx, grads)
-            self.epoch += 1
-            self.hist.append(loss)
-            return loss.numpy().astype(np.float64), grads.numpy().astype(np.float64)
-        self.sopt.minimize(func)
-        """
+        # # def func(params_1d):
+        # #     self.sopt.assign_params(params_1d)
+        # #     tf.print('epoch:', self.epoch)
+        # #     loss, grads = self.train_step(x, y_gt)
+        # #     grads = tf.dynamic_stitch(self.sopt.idx, grads)
+        # #     self.epoch += 1
+        # #     self.hist.append(loss)
+        # #     return loss.numpy().astype(np.float64), grads.numpy().astype(np.float64)
+        # # self.sopt.minimize(func)
+        
             
         return self.hist
     
@@ -127,7 +128,6 @@ class MLP(models.Model):
         x = tf.convert_to_tensor(x, tf.float32)
         y_pred = self.model(x)
         return y_pred.numpy()
-    
 
 act = activations.tanh
 inp = layers.Input(shape = (args.num_features,1))
@@ -139,6 +139,7 @@ out = layers.Dense(args.num_targets)(hl)
 model = models.Model(inp, out)
 print(model.summary())
 
+# OPTIMIZER
 lr = 1e-3
 opt = optimizers.Adam(lr)
 # sopt = SciOP(model)
@@ -152,7 +153,55 @@ targets_val_pred = mlp.predict(features_val)
 targets_val_pred_reshape = targets_val_pred.reshape(args.spatial_dimension+[args.num_targets])
 print(f'prediction shape (after reshape): {targets_val_pred_reshape.shape}')
 
+"""
 
+# Model
+afun = args.activation_function
+npl  = args.num_neurons_per_layer
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(args.num_features, 1)),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(npl, activation=afun),
+  tf.keras.layers.Dense(1, activation=afun)
+])
+model.compile(optimizer = 'adam', loss = 'mse')
+print(model.summary())
+
+# Training
+hist = model.fit(features_tr, targets_tr, epochs=15, validation_split=0.1)
+targets_val_pred = model.predict(targets_val)
+
+# Results Visualizaton
 # We plot the quantities at the center of the computational domain
 
 palette = sns.color_palette("muted")
