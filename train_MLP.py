@@ -1,10 +1,11 @@
 '''
-Execution details (only Núria's cluster)
+Execution details (Hybrid Jofre cluster)
 activate conda environment: 'tf-gpu'
 execute by: XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda python3 <python_script_name>
 '''
 
 import argparse
+import os
 
 import numpy as np
 import seaborn as sns
@@ -14,6 +15,7 @@ from matplotlib import pyplot as plt
 from tensorflow.keras import models, layers, optimizers, activations
 # from ScipyOP import optimizer as SciOP # L-BFGS-B optimizer
 
+os.environ['CUDA_VISIBLE_DEVICES']  = '0'
 
 parser = argparse.ArgumentParser(description="PINN_RANS_channel_flow")
 parser.add_argument("--ndim", default=3, type=int, help="problem dimensions")
@@ -37,10 +39,10 @@ args.num_targets  = len(args.targets_name)
 # ____________________________________________________________________________
 
 
-features_tr  = np.zeros(shape = args.spatial_dimension + args.num_features)
-features_val = np.zeros(shape = args.spatial_dimension + args.num_features)
-targets_tr   = np.zeros(shape = args.spatial_dimension + args.num_targets)
-targets_val  = np.zeros(shape = args.spatial_dimension + args.num_targets)
+features_tr  = np.zeros(shape = args.spatial_dimension + [args.num_features,])
+features_val = np.zeros(shape = args.spatial_dimension + [args.num_features,])
+targets_tr   = np.zeros(shape = args.spatial_dimension + [args.num_targets,])
+targets_val  = np.zeros(shape = args.spatial_dimension + [args.num_targets,])
 assert len(args.training_filenames) == 1,   'code implemented only for 1 training file' 
 assert len(args.validation_filenames) == 1, 'code implemented only for 1 validation file' 
 with np.load(args.training_filenames[0]) as f:
@@ -61,8 +63,14 @@ with np.load(args.validation_filenames[0]) as f:
 # Reshape, to get one discretized node as NN input:
 features_tr  = features_tr.reshape(-1,  args.num_features)
 features_val = features_val.reshape(-1, args.num_features)
-targets_tr   = targets_tr.reshape(-1,   args.num_targets)
-targets_val  = targets_val.reshape(-1,  args.num_targets)
+if args.num_targets == 1:
+    targets_tr   = targets_tr.reshape(-1)
+    targets_val  = targets_val.reshape(-1)
+else:
+    targets_tr   = targets_tr.reshape(-1,   args.num_targets)
+    targets_val  = targets_val.reshape(-1,  args.num_targets)
+print(f"\nShape training features: {features_tr.shape}")
+print(f"Shape training targets: {targets_tr.shape}")
 
 # Model: Multi-Layer Perceptron
 class MLP(models.Model):
@@ -122,7 +130,7 @@ class MLP(models.Model):
     
 
 act = activations.tanh
-inp = layers.Input(shape = (args.num_features,))
+inp = layers.Input(shape = (args.num_features,1))
 hl = inp
 for i in range(args.num_hidden_layers):
     hl = layers.Dense(args.num_neurons_per_layer, activation = act)(hl)
