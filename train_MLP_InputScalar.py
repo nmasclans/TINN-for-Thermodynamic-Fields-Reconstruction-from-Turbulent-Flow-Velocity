@@ -26,8 +26,8 @@ parser.add_argument("--ndim", default=3, type=int, help="problem dimensions")
 parser.add_argument("--cuda_visible_device", default=0, type=int, help="cuda visible device, for Hybrid machine choose 0 or 1")
 parser.add_argument("--features_idx", default=[0,1,2,3,4], type=str, help="Selected features index")
 parser.add_argument("--targets_name", default=['rho',], type=str, help="Selected targets name")
-parser.add_argument("--training_filenames", default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',], type=str, help="List of training filenames (abspath)")
-parser.add_argument("--validation_filenames", default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',], type=str, help="List of validation filenames (abspath)")
+parser.add_argument("--training_filename", default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="List of training filenames (abspath)")
+parser.add_argument("--validation_filename", default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="List of validation filenames (abspath)")
 parser.add_argument("--spatial_dimension", default=[128,128,128], type=list, help="Spatial discretization, grid of statistics data. Equals the shape of the stored quantities in 'statistic")
 parser.add_argument("--learning_rate", default=1e-3, type=float, help="Learning rate parameter of optimizer")
 parser.add_argument("--loss", default="MSE", type=str, help="Loss function name")
@@ -99,9 +99,7 @@ features_val = np.zeros(shape = args.spatial_dimension + [args.num_features,], d
 targets_tr   = np.zeros(shape = args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
 targets_val  = np.zeros(shape = args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
 args.features_name = []
-assert len(args.training_filenames) == 1,   'code implemented only for 1 training file' 
-assert len(args.validation_filenames) == 1, 'code implemented only for 1 validation file' 
-with np.load(args.training_filenames[0]) as f:
+with np.load(args.training_filename) as f:
     features_data  = f['x']
     all_features_name = f['features_names']
     for ii in range(args.num_features):
@@ -109,7 +107,7 @@ with np.load(args.training_filenames[0]) as f:
         args.features_name.append(all_features_name[args.features_idx[ii]])
     for tt in range(args.num_targets):
         targets_tr[:,:,:,tt]  = f[args.targets_name[tt]]
-with np.load(args.validation_filenames[0]) as f:
+with np.load(args.validation_filename) as f:
     features_data  = f['x']
     # features_names = f['features_names']
     for ii in range(args.num_features):

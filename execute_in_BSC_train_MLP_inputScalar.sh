@@ -13,8 +13,8 @@ module load python/3.7.4_ML
 module load tensorflow/2.5.0
 
 
-for HIDDEN_LAYERS in 1 2; do
-    for NEURONS_PER_HIDDEN_LAYER in 8; do
+for HIDDEN_LAYERS in 1 2 3 4 5 6 7; do
+    for NEURONS_PER_HIDDEN_LAYER in 8 16 32 64; do
         
         echo ""
         echo "----------------------------------------------------------------------------------"
@@ -26,9 +26,9 @@ for HIDDEN_LAYERS in 1 2; do
         python3 train_MLP_InputScalar.py \
 		--num_hidden_layers $HIDDEN_LAYERS \
 		--num_neurons_per_layer $NEURONS_PER_HIDDEN_LAYER \
-	       	--num_epochs 1 \
-		--training_filenames ["/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz",] \
-		--validation_filenames ["/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz",]
+	       	--num_epochs 20 \
+		--training_filename "/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz" \
+		--validation_filename "/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz"
 
     done
 done
