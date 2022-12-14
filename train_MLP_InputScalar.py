@@ -238,9 +238,9 @@ class MLP(models.Model):
                 self.optimizer.apply_gradients(zip(grads, self.trainable_variables))
                 loss_epoch   += loss_batch
                 metric_epoch += metric_batch
-		# Print batch results, if required
+                # Print batch results, if required
                 if nbatch % args.num_batches_per_print_information == 0:
-	            tf.print(f"	Batch: {nbatch}, Loss {loss_batch:.5f}, Metric {metric_batch:.5f}")
+                    tf.print(f"    Batch: {nbatch}, Loss {loss_batch:.5f}, Metric {metric_batch:.5f}")
             loss_epoch *= 1/nbatch; metric_epoch *= 1/nbatch
             tf.print('\nTraining Epoch:',epoch,', Loss:',loss_epoch,', Metric:',metric_epoch)
             self.hist.append(loss_epoch)
