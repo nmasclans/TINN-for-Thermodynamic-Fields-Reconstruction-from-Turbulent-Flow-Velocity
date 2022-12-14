@@ -23,7 +23,6 @@ from tensorflow.keras import models, layers, optimizers, activations, initialize
 
 parser = argparse.ArgumentParser(description="PINN_RANS_channel_flow")
 parser.add_argument("--ndim", default=3, type=int, help="problem dimensions")
-parser.add_argument("--cuda_visible_device", default=0, type=int, help="cuda visible device, for Hybrid machine choose 0 or 1")
 parser.add_argument("--features_idx", default=[0,1,2,3,4], type=str, help="Selected features index")
 parser.add_argument("--targets_name", default=['rho',], type=str, help="Selected targets name")
 parser.add_argument("--training_filename", default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="List of training filenames (abspath)")

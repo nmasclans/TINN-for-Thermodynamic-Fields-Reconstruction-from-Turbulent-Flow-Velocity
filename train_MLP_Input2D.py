@@ -1,8 +1,16 @@
-'''
+"""
 Execution details (Hybrid Jofre cluster)
 activate conda environment: 'tf-gpu'
 execute by: XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda python3 <python_script_name>
-'''
+"""
+
+"""
+Features used: idx 1,2,3,4: 'u', 'TKE_normalized', 'vorticity_magn_normalized', 'enstrophy_normalized'
+Features not used: idx 0: 'y' ->> not used because it is 'included' from the data distribution of input data as xy plane, shape [128,128]
+"""
+
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import argparse
 import os
@@ -15,17 +23,15 @@ from datetime import datetime
 
 from matplotlib import pyplot as plt
 from tensorflow.keras import models, layers, optimizers, activations, initializers
-# from ScipyOP import optimizer as SciOP # L-BFGS-B optimizer
 
 
-
-parser = argparse.ArgumentParser(description="PINN_RANS_channel_flow")
+parser = argparse.ArgumentParser(description="NN_based_inference")
 parser.add_argument("--ndim",                   default=3,              type=int,   help="problem dimensions")
 parser.add_argument("--cuda_visible_device",    default=0,              type=int,   help="cuda visible device, for Hybrid machine choose 0 or 1")
-parser.add_argument("--features_idx",           default=[0,1,2,3,4],    type=str,   help="Selected features index")
+parser.add_argument("--features_idx",           default=[1,2,3,4],    type=str,   help="Selected features index")
 parser.add_argument("--targets_name",           default=['rho',],       type=str,   help="Selected targets name")
-parser.add_argument("--training_filenames",     default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',], type=str, help="List of training filenames (abspath)")
-parser.add_argument("--validation_filenames",   default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',], type=str, help="List of validation filenames (abspath)")
+parser.add_argument("--training_filename",     default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="Single training filename (abspath)")
+parser.add_argument("--validation_filename",   default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="Single validation filename (abspath)")
 parser.add_argument("--spatial_dimension",      default=[128,128,128],  type=list,  help="Spatial discretization, grid of statistics data. Equals the shape of the stored quantities in 'statistic")
 parser.add_argument("--learning_rate",          default=1e-3,           type=float, help="Learning rate parameter of optimizer")
 parser.add_argument("--loss",                   default="MSE",          type=str,   help="Loss function name")
@@ -38,8 +44,6 @@ parser.add_argument("--initializer_seed",       default=13,             type=int
 parser.add_argument("--num_epochs",             default=20,             type=int,   help="Number of training epochs")
 parser.add_argument("--batch_size",             default=1,              type=int,   help="Batch size (recomended to be multiple of 8)")
 parser.add_argument("--visualization_step",     default=100,            type=int,   help="") # TODO
-parser.add_argument("--batch_printing_step",    default=128,            type=int,   help="") # TODO
-parser.add_argument("--epochs_per_validation",  default=5,              type=int,   help="validation step to be done every #epochs_per_validation epochs")
 parser.add_argument("--features_limits", 
     default={'y':[0.0,0.0002],'u':[0.0,3.5],'TKE_normalized':[0.0,0.2],'vorticity_magn_normalized':[0.0,55.0],'enstrophy_normalized':[0.0,1400.0]},
     type=dict, help="features minimum and maximum values, used for data normalization"
@@ -48,13 +52,12 @@ parser.add_argument("--targets_limits",
     default={'c_p':[1500.0,3900.0],'rho':[145.0,850.0],'T':[90.0,200.0]},
     type=dict, help="targets minimum and maximum values, used for data normalization"
 )
+parser.add_argument("--num_batches_per_print_information", default=25000, type=int, help="number of batches for when results information is printed")
 
 args = parser.parse_args()
 args.num_features = len(args.features_idx)
 args.num_targets  = len(args.targets_name)
 print(f"\nArguments:\n{args}")
-
-os.environ['CUDA_VISIBLE_DEVICES']  = str(args.cuda_visible_device)
 
 act_fun = args.activation_function
 in_type = args.initializer_type 
@@ -103,7 +106,7 @@ targets_val  = np.zeros(shape = args.spatial_dimension + [args.num_targets,], dt
 args.features_name = []
 assert len(args.training_filenames) == 1,   'code implemented only for 1 training file' 
 assert len(args.validation_filenames) == 1, 'code implemented only for 1 validation file' 
-with np.load(args.training_filenames[0]) as f:
+with np.load(args.training_filename) as f:
     features_data  = f['x']
     all_features_name = f['features_names']
     for ii in range(args.num_features):
@@ -111,7 +114,7 @@ with np.load(args.training_filenames[0]) as f:
         args.features_name.append(all_features_name[args.features_idx[ii]])
     for tt in range(args.num_targets):
         targets_tr[:,:,:,tt]  = f[args.targets_name[tt]]
-with np.load(args.validation_filenames[0]) as f:
+with np.load(args.validation_filename) as f:
     features_data  = f['x']
     # features_names = f['features_names']
     for ii in range(args.num_features):
@@ -214,7 +217,7 @@ class MLP(models.Model):
         grads = tape.gradient(loss, trainable_vars)
         if self.metric_func is not None:
             metric = metric_func(y_gt, y_pred)
-        return loss, grads, metric
+        return grads, loss, metric
 
     @tf.function
     def test_step(self, x, y_gt):
@@ -225,41 +228,40 @@ class MLP(models.Model):
             metric = metric_func(y_gt, y_pred)
         return y_pred, loss, metric
 
-    def fit_and_validate(self, dataset_tr, dataset_val, y_gt, args):
+    def fit(self, dataset, args):
         # --> training using Adam optimizer, validate at each epoch and visualize validation results
         for epoch in range(1,self.epochs+1):
             # train
-            loss_epoch = 0; metric_epoch = 0
             tf.print("\n-----------------------------------------------------------------------------")
-            tf.print('Training Epoch:', self.epoch)
-            for nbatch, (x_batch_tr, y_batch_tr) in enumerate(dataset_tr):
-                loss_batch, grads, metric_batch = self.train_step(x_batch_tr, y_batch_tr)
+            tf.print("Training Epoch:",epoch)
+            loss_epoch = 0; metric_epoch = 0
+            for nbatch, (features, targets_gt) in enumerate(dataset):
+                grads, loss_batch, metric_batch = self.train_step(features, targets_gt)
                 self.optimizer.apply_gradients(zip(grads, self.trainable_variables))
                 loss_epoch   += loss_batch
                 metric_epoch += metric_batch
-                if nbatch % args.batch_printing_step == 0:
-                    tf.print(f"  Batch: {nbatch}, Loss: {loss_batch:.5f}, Metric: {metric_batch:.5f}")
+                # Print batch results, if required
+                if nbatch % args.num_batches_per_print_information == 0:
+                    tf.print(f"    Batch: {nbatch}, Loss {loss_batch:.5f}, Metric {metric_batch:.5f}")
             loss_epoch *= 1/nbatch; metric_epoch *= 1/nbatch
             tf.print('\nTraining Epoch:',epoch,', Loss:',loss_epoch,', Metric:',metric_epoch)
-            self.epoch += 1
             self.hist.append(loss_epoch)
-            # validate
-            if epoch-1 % args.epochs_per_validation:
-                loss_val = 0; metric_val = 0
-                tf.print("\n-----------------------------------------------------------------------------")
-                tf.print("Validation Epoch")
-                for nbatch, (x_batch, y_batch) in enumerate(dataset_val):
-                    y_pred_batch, loss_batch, metric_batch = self.test_step(x_batch, y_batch)
-                    loss_val         += loss_batch
-                    metric_val       += metric_batch
-                    if nbatch % args.batch_printing_step == 0:
-                        tf.print(f"  Batch: {nbatch}, Loss: {loss_batch:.5f}, Metric: {metric_batch:.5f}")
-                        visualize_prediction(y_batch, y_pred_batch, epoch, nbatch, args)
-                loss_val *= 1/nbatch; metric_val *= 1/nbatch
-                tf.print(f"\nValidation Loss: {loss_val:.5f}, Metric: {metric_val:.5f}")
-            # print time
+            # Print time
             now = datetime.now().strftime("%H:%M:%S")
             print(f"Current Time: {now}")
+
+    def validate(self, dataset, args):
+        loss_val = 0; metric_val = 0
+        tf.print("\n-----------------------------------------------------------------------------")
+        tf.print("Validation Epoch")
+        for nbatch, (features, targets_gt) in enumerate(dataset):
+            _, loss_batch, metric_batch = self.test_step(features, targets_gt)
+            loss_val += loss_batch; metric_val += metric_batch
+        loss_val *= 1/nbatch; metric_val *= 1/nbatch
+        tf.print(f"\nValidation Loss: {loss_val:.5f}, Metric: {metric_val:.5f}")
+        # print time
+        now = datetime.now().strftime("%H:%M:%S")
+        print(f"Current Time: {now}")
 
 
 if act_fun == "relu":
@@ -277,7 +279,8 @@ ny = args.spatial_dimension[1]
 nx = args.spatial_dimension[2]
 inp = layers.Input(shape = (ny, nx, args.num_features))
 hl = layers.Flatten()(inp)
-hl = layers.Dense(256, activation = act_fun, kernel_initializer=initializer)(hl)
+for i in range(args.num_hidden_layers):
+    hl = layers.Dense(args.num_neurons_per_layer, activation = act_fun, kernel_initializer=initializer)(hl)
 hl = layers.Dense(ny*nx*args.num_targets, activation = act_fun, kernel_initializer=initializer)(hl)
 out = layers.Reshape((ny,nx,args.num_targets))(hl)
 
@@ -291,11 +294,10 @@ opt = optimizers.Adam(lr)
 
 # TRAINING
 mlp = MLP(model, opt, loss_func=loss_func, metric_func=metric_func, epochs=args.num_epochs) 
-# hist = mlp.fit(dataset_tr)
+mlp.fit(dataset_tr, args)
 
 # VALIDATION
 # targets_val_pred, loss_validation = mlp.predict(dataset_val,args=args)
 
-mlp.fit_and_validate(dataset_tr, dataset_val, targets_val, args=args)
 
 
