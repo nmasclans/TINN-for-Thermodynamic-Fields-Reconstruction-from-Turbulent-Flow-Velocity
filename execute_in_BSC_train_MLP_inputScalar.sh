@@ -23,6 +23,12 @@ for HIDDEN_LAYERS in 1 2; do
         echo "----------------------------------------------------------------------------------"
         echo "----------------------------------------------------------------------------------"
         
-        XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda python3 train_MLP_InputScalar.py --num_hidden_layers $HIDDEN_LAYERS --num_neurons_per_layer $NEURONS_PER_HIDDEN_LAYER --num_epochs 1
+        python3 train_MLP_InputScalar.py \
+		--num_hidden_layers $HIDDEN_LAYERS \
+		--num_neurons_per_layer $NEURONS_PER_HIDDEN_LAYER \
+	       	--num_epochs 1 \
+		--training_filenames ["/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz",] \
+		--validation_filenames ["/gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz",]
+
     done
 done
