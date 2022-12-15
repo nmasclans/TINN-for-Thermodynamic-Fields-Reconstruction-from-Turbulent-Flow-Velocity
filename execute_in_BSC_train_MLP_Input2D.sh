@@ -13,7 +13,7 @@ module load python/3.7.4_ML
 module load tensorflow/2.5.0
 
 
-for HIDDEN_LAYERS in 1 2 3 4 5; do
+for HIDDEN_LAYERS in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
     for NEURONS_PER_HIDDEN_LAYER in 128 256 512 1024; do
         
         echo ""
