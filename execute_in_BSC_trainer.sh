@@ -4,7 +4,7 @@
 #SBATCH -c 80
 #SBATCH --gres=gpu:2
 #SBATCH --time=48:00:00
-#SBATCH --output=output_MLP_Input2D_%j.out
+#SBATCH --output=PINNS_training_%j.out
 ##SBATCH --error=___%j.err
 
 module purge
