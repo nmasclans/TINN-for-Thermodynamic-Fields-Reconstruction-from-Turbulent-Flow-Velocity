@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ##SBATCH -N 1 
-#SBATCH -c 80
+#SBATCH -c 40
 #SBATCH --gres=gpu:1
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 #SBATCH --output=PINNS_training_%j.out
 ##SBATCH --error=___%j.err
 
