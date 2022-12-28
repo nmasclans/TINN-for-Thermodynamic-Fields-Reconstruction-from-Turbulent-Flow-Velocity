@@ -1,0 +1,4539 @@
+unload bsc/commands (PATH, MANPATH) 
+unload CUDA/9.1 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDA_HOME, CUDA_VERSION, CUDA_INC, CUDA_INSTALL_PATH) 
+unload OPENMPI/3.0.0 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH,
+PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, MPI, MPI_V) 
+unload GCC/6.4.0 (PATH, MANPATH, INFOPATH, LD_LIBRARY_PATH, LIBRARY_PATH,
+C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, STD COMP VARS) 
+load GCC/8.3.0 (PATH, MANPATH, INFOPATH, LIBRARY_PATH, LD_LIBRARY_PATH, STD
+COMP VARS) 
+load CUDA/10.2 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDA_HOME, CUDA_VERSION, CUDA_INC, CUDA_INSTALL_PATH) 
+load CUDNN/7.6.4 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, CUDNN_LIB_DIR, CUDNN_LIBRARY, CUDNN_INCLUDE_DIR) 
+load NCCL/2.4.8 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load TENSORRT/6.0.1 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load OPENMPI/4.0.1 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH,
+PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, MPI, MPI_V) 
+load ATLAS/3.10.3 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load SCALAPACK/2.0.2 (LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH) 
+load FFTW/3.3.8 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, PKG_CONFIG_PATH) 
+load SZIP/2.1.1 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load FFMPEG/4.2.1 (PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load OPENCV/4.1.1 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, PYTHONPATH) 
+load PYTHON/3.7.4_ML (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH,
+PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, PYTHONHOME, PYTHONPATH,
+OMPI_MCA_mpi_warn_on_fork, PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION,
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION) 
+load TENSORFLOW/2.5.0 (PATH, PYTHONPATH) 
+unload NCCL/2.4.8 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+load NCCL/2.9.9 (LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH) 
+
+The following have been reloaded with a version change:
+  1) nccl/2.4.8 => nccl/2.9.9
+
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 1
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.27275461
+Current Time: 12:09:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.271969944
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214841083 0.476604134 0.560525119 0.645203471 1 0.0363718 0.99999994 0.00101672253]
+Current Time: 12:09:28
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.272463799
+Current Time: 12:31:22
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.271944016
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214844644 0.476671249 0.560269058 0.645296574 1 0.0355106778 0.99999994 0.00072899519]
+Current Time: 12:31:27
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.272422075
+Current Time: 12:52:43
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.271893024
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214769438 0.476302743 0.559666157 0.645259 1 0.0337394513 0.99999994 0.000820705143]
+Current Time: 12:52:49
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.272266626
+Current Time: 13:14:35
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.271762133
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214690223 0.476434588 0.559303463 0.645598233 1 0.0323121436 0.99999994 0.000151557702]
+Current Time: 13:14:39
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.272240818
+Current Time: 13:36:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.271730661
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214631915 0.476294875 0.558777094 0.645438969 1 0.0308922492 0.99999994 0.000297335908]
+Current Time: 13:36:26
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.272226095
+Current Time: 13:57:53
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.271747768
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214646503 0.476499885 0.558965 0.645418763 1 0.0314762481 0.99999994 0.000351507246]
+Current Time: 13:57:58
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.272223562
+Current Time: 14:19:18
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.271757841
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.21469456 0.47630319 0.558644 0.645518482 1 0.030413378 0.99999994 6.78443757e-05]
+Current Time: 14:19:22
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.272219568
+Current Time: 14:40:54
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.271736532
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214664772 0.476247549 0.558308065 0.645509124 1 0.0294149313 0.99999994 9.33684e-05]
+Current Time: 14:40:59
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.272213876
+Current Time: 15:02:45
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 1
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+Epoch 9: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 2
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.453916281
+Current Time: 15:23:51
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.453383744
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316740721 0.66854924 0.679332495 1 1 0.0379974172 0.99999994 1]
+Current Time: 15:23:59
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.453734577
+Current Time: 15:44:59
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.453180462
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316486716 0.667822123 0.677960575 1 1 0.033881817 0.99999994 1]
+Current Time: 15:45:04
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.453661829
+Current Time: 16:06:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.453102171
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316388845 0.667639256 0.676674128 1 1 0.0300222747 0.99999994 1]
+Current Time: 16:06:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.453638405
+Current Time: 16:27:10
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.453140348
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316436499 0.667638361 0.677006245 1 1 0.0310190897 0.99999994 1]
+Current Time: 16:27:15
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.453624487
+Current Time: 16:48:16
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.453110278
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316399 0.667758048 0.676939666 1 1 0.0308187492 1 1]
+Current Time: 16:48:21
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.453621268
+Current Time: 17:09:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.453127801
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316420883 0.667628288 0.677259147 1 1 0.0317773111 0.99999994 1]
+Current Time: 17:09:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.453619301
+Current Time: 17:30:41
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.453127205
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316420168 0.667607307 0.676724136 1 1 0.0301723462 0.99999994 1]
+Current Time: 17:30:46
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.299453616
+Current Time: 17:51:51
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.0152415447
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0174754579 0.176948026 0.18799828 0.150615275 0.33455956 0.0788199604 0.00597958919 0.00655856822]
+Current Time: 17:51:56
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.014224
+Current Time: 18:12:55
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.0142669203
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.016525412 0.186331466 0.182266429 0.13494575 0.335559905 0.0762936473 0.00329555478 0.00724196667]
+Current Time: 18:12:59
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.0137804542
+Current Time: 18:34:06
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.0140121505
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0162542667 0.18736954 0.180570349 0.130674064 0.335544586 0.0754924342 0.00275408244 0.00735658407]
+Current Time: 18:34:10
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.0135588897
+Current Time: 18:55:19
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.0137860598
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0160796251 0.184233472 0.179693386 0.131747395 0.332233667 0.0750990361 0.00295473123 0.00626023673]
+Current Time: 18:55:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.013282151
+Current Time: 19:16:59
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.0136553431
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0158060119 0.182569727 0.177825257 0.131201014 0.328370869 0.0739038736 0.00313715078 0.00699625]
+Current Time: 19:17:04
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.0131195877
+Current Time: 19:38:13
+
+-----------------------------------------------------------------------------
+Validation Epoch 12
+Loss 'Supervised_PINNS': 0.0136560407
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.015687013 0.18079336 0.177104607 0.131944716 0.326026022 0.0733430833 0.00370749086 0.00731594162]
+Current Time: 19:38:18
+
+-----------------------------------------------------------------------------
+Training Epoch: 13
+Loss 'Supervised_PINNS': 0.013023369
+Current Time: 19:59:25
+
+-----------------------------------------------------------------------------
+Validation Epoch 13
+Loss 'Supervised_PINNS': 0.0135968821
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0155741423 0.179081932 0.176144078 0.132476717 0.323081583 0.0728739351 0.00388343073 0.0075355093]
+Current Time: 19:59:30
+
+-----------------------------------------------------------------------------
+Training Epoch: 14
+Loss 'Supervised_PINNS': 0.0129672494
+Current Time: 20:21:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 14
+Loss 'Supervised_PINNS': 0.0135991657
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0155413663 0.178363681 0.17595242 0.132931843 0.322220236 0.0727051422 0.0041099852 0.00760071911]
+Current Time: 20:21:26
+
+-----------------------------------------------------------------------------
+Training Epoch: 15
+Loss 'Supervised_PINNS': 0.0129349278
+Current Time: 20:42:36
+
+-----------------------------------------------------------------------------
+Validation Epoch 15
+Loss 'Supervised_PINNS': 0.0135775022
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0155152688 0.178100064 0.175748959 0.133052 0.321650535 0.0725443661 0.00421672873 0.00747236051]
+Current Time: 20:42:41
+
+-----------------------------------------------------------------------------
+Training Epoch: 16
+Loss 'Supervised_PINNS': 0.0129159847
+Current Time: 21:03:54
+
+-----------------------------------------------------------------------------
+Validation Epoch 16
+Loss 'Supervised_PINNS': 0.01356606
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0154921124 0.177872956 0.175568804 0.133015722 0.321261883 0.0724287331 0.00422119722 0.00753222778]
+Current Time: 21:03:58
+
+-----------------------------------------------------------------------------
+Training Epoch: 17
+Loss 'Supervised_PINNS': 0.0129046664
+Current Time: 21:25:24
+
+-----------------------------------------------------------------------------
+Validation Epoch 17
+Loss 'Supervised_PINNS': 0.0135708414
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0154817896 0.177819729 0.175487041 0.132994741 0.321087152 0.0723791569 0.00428361958 0.00762219774]
+Current Time: 21:25:29
+
+-----------------------------------------------------------------------------
+Training Epoch: 18
+Loss 'Supervised_PINNS': 0.0128979404
+Current Time: 21:46:33
+
+-----------------------------------------------------------------------------
+Validation Epoch 18
+Loss 'Supervised_PINNS': 0.0135557922
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0154735642 0.177789882 0.17540963 0.132954359 0.320949435 0.0723251402 0.00426781783 0.00753559545]
+Current Time: 21:46:38
+
+-----------------------------------------------------------------------------
+Training Epoch: 19
+Loss 'Supervised_PINNS': 0.012894067
+Current Time: 22:07:54
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 2
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+
+Epoch 14: LearningRateScheduler setting learning rate to 2.5118864315095797e-06.
+
+Epoch 15: LearningRateScheduler setting learning rate to 1.5848931924611143e-06.
+
+Epoch 16: LearningRateScheduler setting learning rate to 1.0000000000000002e-06.
+
+Epoch 17: LearningRateScheduler setting learning rate to 6.309573444801931e-07.
+
+Epoch 18: LearningRateScheduler setting learning rate to 3.981071705534974e-07.
+
+Epoch 19: LearningRateScheduler setting learning rate to 2.51188643150958e-07.
+
+Epoch 20: LearningRateScheduler setting learning rate to 1.5848931924611146e-07.
+Epoch 20: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 3
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.453978062
+Current Time: 22:29:00
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.453440934
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316812247 0.667951107 0.677648067 1 1 0.0329441726 0.99999994 1]
+Current Time: 22:29:07
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.453724563
+Current Time: 22:50:09
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.453193337
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.31650278 0.668182194 0.677631378 1 1 0.0328941308 0.99999994 1]
+Current Time: 22:50:14
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.453673571
+Current Time: 23:11:12
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.453126639
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316419423 0.667587698 0.6764552 1 1 0.0293653961 0.99999994 1]
+Current Time: 23:11:17
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.453643322
+Current Time: 23:32:56
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.453128427
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316421658 0.667636573 0.677063167 1 1 0.0311894957 0.99999994 1]
+Current Time: 23:33:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.453626096
+Current Time: 23:54:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.453115791
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316405863 0.667609692 0.676708162 1 1 0.0301242359 0.99999994 1]
+Current Time: 23:54:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.453622162
+Current Time: 00:16:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.453108579
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316396832 0.667563617 0.676583827 1 1 0.0297514424 0.99999994 1]
+Current Time: 00:16:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.453611225
+Current Time: 00:37:23
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.453112096
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316401243 0.667604744 0.676854849 1 1 0.0305646509 0.99999994 1]
+Current Time: 00:37:28
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.453615546
+Current Time: 00:59:19
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.453122556
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316414297 0.667582333 0.676687539 1 1 0.0300625358 0.99999994 1]
+Current Time: 00:59:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.453613728
+Current Time: 01:20:44
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.453127712
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316420764 0.667575061 0.676467 1 1 0.0294011384 0.99999994 1]
+Current Time: 01:20:49
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.453609526
+Current Time: 01:42:51
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.453109801
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316398352 0.667579472 0.676659644 1 1 0.0299790129 0.99999994 1]
+Current Time: 01:42:56
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.453607976
+Current Time: 02:04:24
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 3
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+Epoch 11: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 4
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.0135963298
+Current Time: 02:25:44
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.00747570861
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00700017484 0.0805101395 0.101003051 0.0835709497 0.175674438 0.0437637493 0.00923158694 0.00964307506]
+Current Time: 02:25:51
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.00486516906
+Current Time: 02:47:24
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.00598760182
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0060306876 0.0503666 0.0853944942 0.0738344416 0.144558907 0.0377901271 0.00710919639 0.00428256439]
+Current Time: 02:47:29
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.00440257648
+Current Time: 03:09:05
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.00508069154
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00576475635 0.0609848052 0.0839498267 0.0723903403 0.14350237 0.0359567627 0.00267149601 0.00208675605]
+Current Time: 03:09:10
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.00416322565
+Current Time: 03:30:58
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.00601292169
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0063190558 0.0543217026 0.0922008753 0.0804242715 0.156942561 0.039235808 0.00510698 0.00421420764]
+Current Time: 03:31:02
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.00354434573
+Current Time: 03:52:53
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.00424821535
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00483298535 0.0337598957 0.0759128332 0.0682813227 0.125383094 0.0340740792 0.00238675391 0.00153013982]
+Current Time: 03:52:58
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.00324292528
+Current Time: 04:14:45
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.00427249679
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00488225045 0.0359582454 0.0771638826 0.0693861246 0.128292382 0.0338131487 0.00220337603 0.00147165498]
+Current Time: 04:14:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.00313003315
+Current Time: 04:36:56
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.00441788277
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00505028 0.0370675437 0.0799627081 0.0724300519 0.132370755 0.0350873508 0.00210659369 0.00166582665]
+Current Time: 04:37:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.00306918449
+Current Time: 04:59:09
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.00447672885
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00505632907 0.0354870781 0.0797452107 0.072014384 0.132199138 0.0350220911 0.00241926825 0.00172015699]
+Current Time: 04:59:14
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.00303560961
+Current Time: 05:21:08
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.00433843071
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00495577184 0.0325129814 0.0780488104 0.0707344413 0.128593653 0.0348183513 0.00220010197 0.0014616996]
+Current Time: 05:21:13
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.00301283924
+Current Time: 05:42:45
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.00433326606
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00497837504 0.0365400426 0.0788310543 0.0710146725 0.131089821 0.0343886875 0.00210464071 0.00142664125]
+Current Time: 05:42:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.0029996885
+Current Time: 06:05:15
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.00431357184
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0049559027 0.0382019393 0.0785251111 0.070391722 0.131106943 0.0340766534 0.0021024067 0.00142328197]
+Current Time: 06:05:20
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.00298830052
+Current Time: 06:27:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.00425195787
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0048839 0.035713587 0.0778014138 0.0702273846 0.129114673 0.0340622 0.00204600953 0.00141033577]
+Current Time: 06:27:34
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.00298439502
+Current Time: 06:50:05
+
+-----------------------------------------------------------------------------
+Validation Epoch 12
+Loss 'Supervised_PINNS': 0.00429736869
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00494507514 0.0363103151 0.0784386545 0.0705870911 0.130485326 0.0342435464 0.00205549295 0.00138056267]
+Current Time: 06:50:10
+
+-----------------------------------------------------------------------------
+Training Epoch: 13
+Loss 'Supervised_PINNS': 0.00298074447
+Current Time: 07:11:57
+
+-----------------------------------------------------------------------------
+Validation Epoch 13
+Loss 'Supervised_PINNS': 0.00434091641
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00499770232 0.0374916531 0.0791066065 0.0710481852 0.13188684 0.0343848 0.00208593416 0.00137128856]
+Current Time: 07:12:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 14
+Loss 'Supervised_PINNS': 0.00297769555
+Current Time: 07:33:41
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 4
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+
+Epoch 14: LearningRateScheduler setting learning rate to 2.5118864315095797e-06.
+
+Epoch 15: LearningRateScheduler setting learning rate to 1.5848931924611143e-06.
+Epoch 15: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 5
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.27284497
+Current Time: 07:54:50
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.271977693
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214919612 0.476617128 0.559746325 0.645472527 1 0.0337667726 0.99999994 0.000465389021]
+Current Time: 07:54:57
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.272448957
+Current Time: 08:16:04
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.272148371
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214804962 0.476221949 0.559870243 0.644462705 1 0.0351478346 0.99999994 0.00308985682]
+Current Time: 08:16:09
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.272321612
+Current Time: 08:37:15
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.271758497
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214605048 0.47633 0.558955252 0.645276904 1 0.0315888338 0.99999994 0.000790593447]
+Current Time: 08:37:20
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.272268236
+Current Time: 08:58:23
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.271787941
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214584187 0.476314336 0.559355676 0.645108342 1 0.0329585448 0.99999994 0.00125176948]
+Current Time: 08:58:28
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.272242129
+Current Time: 09:19:51
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.271782458
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214718625 0.476288 0.558598697 0.645511389 1 0.0302845966 0.99999994 0.000119615201]
+Current Time: 09:19:56
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.272230029
+Current Time: 09:41:09
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.271746427
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214674234 0.476252437 0.558826 0.645504773 1 0.0309733 0.99999994 0.000115841183]
+Current Time: 09:41:13
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.272223413
+Current Time: 10:02:19
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.271742344
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.21466811 0.47626555 0.558711 0.6455 1 0.0306328014 0.99999994 0.000124476]
+Current Time: 10:02:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.272218704
+Current Time: 10:23:33
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.271744
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.21465452 0.476243615 0.558527052 0.645454168 1 0.0301269293 0.99999994 0.000249864534]
+Current Time: 10:23:38
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.272213191
+Current Time: 10:44:40
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.271744072
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214680806 0.476258904 0.55841291 0.645528316 1 0.0297103059 0.99999994 4.00358695e-05]
+Current Time: 10:44:45
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.272215486
+Current Time: 11:05:46
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.271735966
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214669347 0.47627458 0.558509886 0.645523787 1 0.030005794 0.99999994 5.08163976e-05]
+Current Time: 11:05:51
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.272210419
+Current Time: 11:26:53
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.271744192
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214683473 0.476270914 0.558489084 0.645534515 1 0.0299327746 0.99999994 2.08625152e-05]
+Current Time: 11:26:58
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.272212654
+Current Time: 11:48:14
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.271731
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214668527 0.476276845 0.558411539 0.645538867 1 0.0296956282 0.99999994 8.82675e-06]
+Current Time: 11:48:19
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.272209436
+Current Time: 12:09:27
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 5
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+Epoch 13: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 1
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.273243
+Current Time: 12:14:53
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.272051245
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.215013579 0.47662881 0.559721887 0.645631313 1 0.0335346311 0.99999994 0.000453196699]
+Current Time: 12:15:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.272475272
+Current Time: 12:20:20
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.271837234
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214718923 0.476412386 0.559236825 0.645305455 1 0.032405 0.99999994 0.000666942389]
+Current Time: 12:20:25
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.272346318
+Current Time: 12:25:52
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.271813065
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.21475023 0.476578146 0.560139954 0.645502806 1 0.0349171571 0.99999994 0.00017455632]
+Current Time: 12:25:57
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.272283137
+Current Time: 12:31:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.271778852
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214672163 0.476363271 0.559095621 0.645389318 1 0.0318975337 0.99999994 0.000456733687]
+Current Time: 12:31:26
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.272251308
+Current Time: 12:36:46
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.271739274
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214671612 0.476363331 0.558720052 0.645564079 1 0.0305961315 0.99999994 7.07705622e-05]
+Current Time: 12:36:51
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.272240281
+Current Time: 12:42:20
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.271739304
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214656249 0.476320833 0.558692217 0.645480037 1 0.0305966884 0.99999994 0.000188603473]
+Current Time: 12:42:25
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.272234529
+Current Time: 12:47:49
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.271799058
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214747235 0.476346761 0.55879885 0.645561159 1 0.0308354609 0.99999994 6.35666584e-05]
+Current Time: 12:47:53
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.272228777
+Current Time: 12:53:19
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.271745473
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214684859 0.476340801 0.558674812 0.64554137 1 0.0304830708 0.99999994 2.45169031e-05]
+Current Time: 12:53:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.272226959
+Current Time: 12:58:44
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.27175
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214690909 0.476309448 0.558565557 0.645542443 1 0.0301542878 0.99999994 2.2639475e-05]
+Current Time: 12:58:48
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.272226542
+Current Time: 13:04:15
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.271744728
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214684546 0.476318508 0.558629334 0.6455369 1 0.030351093 0.99999994 1.89587154e-05]
+Current Time: 13:04:20
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.272225
+Current Time: 13:09:45
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 1
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 64
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 32768, with number of samples 2097152 and batch size 64
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+Epoch 11: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 2
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.454186618
+Current Time: 13:15:13
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.453389615
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316748291 0.668412387 0.680506706 1 1 0.0415202193 0.99999994 1]
+Current Time: 13:15:20
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.453890741
+Current Time: 13:20:41
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.453388065
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316746145 0.668021381 0.678044558 1 1 0.0341338217 0.99999994 1]
+Current Time: 13:20:46
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.453841865
+Current Time: 13:26:05
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.453295082
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316629916 0.668339 0.67934531 1 1 0.0380358063 0.99999994 1]
+Current Time: 13:26:10
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.453766495
+Current Time: 13:31:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.453226656
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316544324 0.66778779 0.678213298 1 1 0.0346399918 0.99999994 1]
+Current Time: 13:31:35
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.453680396
+Current Time: 13:37:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.453122735
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316414535 0.667772532 0.676508605 1 1 0.0295257345 0.99999994 1]
+Current Time: 13:37:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.453661561
+Current Time: 13:42:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.453156382
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316456586 0.667728 0.677617311 1 1 0.0328518115 0.99999994 1]
+Current Time: 13:42:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.453651637
+Current Time: 13:47:50
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.453138918
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316434771 0.667636573 0.676656961 1 1 0.0299707521 0.99999994 1]
+Current Time: 13:47:55
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.453648806
+Current Time: 13:53:14
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.453137606
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316433132 0.667679071 0.676897228 1 1 0.0306916889 0.99999994 1]
+Current Time: 13:53:19
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.453641862
+Current Time: 13:58:40
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.453135282
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316430211 0.667669117 0.676874161 1 1 0.0306223519 0.99999994 1]
+Current Time: 13:58:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.45364067
+Current Time: 14:04:05
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.453138173
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316433817 0.667674303 0.676867485 1 1 0.0306024533 0.99999994 1]
+Current Time: 14:04:09
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.45364216
+Current Time: 14:09:31
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 2
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 64
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 32768, with number of samples 2097152 and batch size 64
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+Epoch 11: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 3
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.45424062
+Current Time: 14:15:06
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.453544647
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316941828 0.668096364 0.6778965 1 1 0.0336894393 0.99999994 1]
+Current Time: 14:15:13
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.453774
+Current Time: 14:20:39
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.453174978
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316479802 0.667707503 0.676961362 1 1 0.030883994 0.99999994 1]
+Current Time: 14:20:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.45368731
+Current Time: 14:26:05
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.453154534
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316454232 0.667664051 0.676568031 1 1 0.0297042746 0.99999994 1]
+Current Time: 14:26:11
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.453671545
+Current Time: 14:31:32
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.45317173
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316475719 0.66769439 0.677039206 1 1 0.0311177876 0.99999994 1]
+Current Time: 14:31:36
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.453662306
+Current Time: 14:36:59
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.453155428
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316455364 0.667770624 0.677029431 1 1 0.0310883112 0.99999994 1]
+Current Time: 14:37:04
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.453658581
+Current Time: 14:42:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.453141779
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316438317 0.667635858 0.676650703 1 1 0.0299521051 0.99999994 1]
+Current Time: 14:42:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.453651756
+Current Time: 14:47:54
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.453144103
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316441238 0.667693794 0.676893473 1 1 0.0306807049 0.99999994 1]
+Current Time: 14:47:59
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.453649789
+Current Time: 14:53:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.453168631
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.316471905 0.667645276 0.676823318 1 1 0.0304698646 0.99999994 1]
+Current Time: 14:53:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.453649223
+Current Time: 14:58:54
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 3
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 64
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 32768, with number of samples 2097152 and batch size 64
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+Epoch 9: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 4
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.0263060499
+Current Time: 15:04:29
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.0130826477
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0142579144 0.132121503 0.162853524 0.157260612 0.268776059 0.0625238717 0.0108525781 0.0057601044]
+Current Time: 15:04:36
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.0117922612
+Current Time: 15:10:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.0133389551
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0140807843 0.140285179 0.155309066 0.15413408 0.254388303 0.0574048795 0.00835874 0.0126072131]
+Current Time: 15:10:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.0113040451
+Current Time: 15:15:31
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.0125710871
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0138333356 0.13425307 0.151189879 0.155775875 0.242564321 0.0552294701 0.00711440388 0.00783149339]
+Current Time: 15:15:36
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.0110771498
+Current Time: 15:21:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.0124697406
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0136799403 0.125130489 0.149656966 0.156499475 0.23783806 0.0546333604 0.004202215 0.0111857541]
+Current Time: 15:21:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.0109520229
+Current Time: 15:26:33
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.0126365293
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0138568236 0.130226448 0.150889739 0.156556159 0.241224319 0.0548887178 0.00683423644 0.00852716342]
+Current Time: 15:26:38
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.0108496817
+Current Time: 15:32:04
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.0124662602
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0139308916 0.131181881 0.150818512 0.155987158 0.241625771 0.054842595 0.0031749676 0.0101105273]
+Current Time: 15:32:09
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.0107435239
+Current Time: 15:37:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.0124484934
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0140536176 0.129263818 0.151723221 0.15798831 0.24212414 0.0550571829 0.00285338191 0.00911838]
+Current Time: 15:37:36
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.0106546357
+Current Time: 15:42:57
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.012353112
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0139488131 0.125647858 0.150903583 0.157981038 0.239942044 0.0547876544 0.00273074396 0.00912413187]
+Current Time: 15:43:02
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.0106091229
+Current Time: 15:48:24
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.0122854095
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0137755983 0.117896177 0.150372759 0.16100733 0.235435575 0.0546753816 0.00264530187 0.00996421929]
+Current Time: 15:48:29
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.0105799902
+Current Time: 15:53:50
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.0122544849
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0138935046 0.119516045 0.151023373 0.160545617 0.237714842 0.0548096634 0.00242534629 0.00902391132]
+Current Time: 15:53:56
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.0105630653
+Current Time: 15:59:17
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.0122406781
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0137957381 0.119603664 0.150178865 0.159936756 0.236155689 0.0544441789 0.00238420209 0.00958615541]
+Current Time: 15:59:22
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.0105514061
+Current Time: 16:04:43
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.0122342119
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0137868784 0.118226379 0.150162399 0.160443887 0.235569715 0.0544735789 0.00250010984 0.00946358405]
+Current Time: 16:04:48
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.0105437469
+Current Time: 16:10:09
+
+-----------------------------------------------------------------------------
+Validation Epoch 12
+Loss 'Supervised_PINNS': 0.0122132339
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0138017982 0.119547166 0.150098428 0.159858048 0.236037821 0.0543993823 0.00235183514 0.00941581372]
+Current Time: 16:10:14
+
+-----------------------------------------------------------------------------
+Training Epoch: 13
+Loss 'Supervised_PINNS': 0.0105394162
+Current Time: 16:15:37
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 4
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 64
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 32768, with number of samples 2097152 and batch size 64
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+
+Epoch 14: LearningRateScheduler setting learning rate to 2.5118864315095797e-06.
+Epoch 14: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 8, Seed: 5
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.273455441
+Current Time: 16:21:06
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.272027701
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214561597 0.476084381 0.560091078 0.644401073 1 0.0358721353 0.99999994 0.0038286855]
+Current Time: 16:21:13
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.272507727
+Current Time: 16:26:34
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.272259682
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.215297148 0.476925701 0.56169349 0.645591557 1 0.0394888632 0.99999994 0.000266231771]
+Current Time: 16:26:39
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.272401184
+Current Time: 16:31:59
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.271849275
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214720681 0.476710349 0.560666382 0.645374775 1 0.0366242602 0.99999994 0.000773186446]
+Current Time: 16:32:04
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.272332191
+Current Time: 16:37:25
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.271916211
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214847699 0.47689867 0.561938107 0.64568013 1 0.0401342139 0.99999994 0.000427781284]
+Current Time: 16:37:30
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.272302061
+Current Time: 16:42:51
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.27183494
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214637682 0.476192683 0.559551299 0.645087123 1 0.0335668102 0.99999994 0.00129373814]
+Current Time: 16:42:56
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.272284448
+Current Time: 16:48:16
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.27186504
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214763954 0.476329446 0.559847057 0.645345807 1 0.0341953151 0.99999994 0.000585020869]
+Current Time: 16:48:21
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.272274852
+Current Time: 16:53:43
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.271780044
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214713454 0.476386398 0.559425414 0.645509958 1 0.0327661373 0.99999994 0.000138273404]
+Current Time: 16:53:48
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.272264242
+Current Time: 16:59:09
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.271785736
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214706942 0.476325303 0.558954298 0.645456135 1 0.0314068273 0.99999994 0.000247949705]
+Current Time: 16:59:14
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.272255957
+Current Time: 17:04:35
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.271779925
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.21471715 0.47638157 0.559089601 0.645506382 1 0.0317623615 0.99999994 0.000107588778]
+Current Time: 17:04:40
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.27225548
+Current Time: 17:10:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.27177918
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.214719817 0.476358861 0.559041917 0.645518303 1 0.0316075459 0.99999994 7.90835475e-05]
+Current Time: 17:10:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.272252709
+Current Time: 17:15:28
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 8
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 5
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 64
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 32768, with number of samples 2097152 and batch size 64
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 24        
+_________________________________________________________________
+dense_1 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_4 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_5 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_6 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_7 (Dense)              (None, 8)                 72        
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 27        
+=================================================================
+Total params: 555
+Trainable params: 555
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+Epoch 11: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 16, Seed: 1
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.0105932551
+Current Time: 17:36:36
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.00599503145
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00641283253 0.0736341 0.0906771198 0.0778231397 0.15528734 0.0389208943 0.00516929 0.00367326452]
+Current Time: 17:36:43
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.00481380429
+Current Time: 17:57:45
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.00560120167
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00601809099 0.0390673317 0.0823017582 0.0744822323 0.134249046 0.0381740071 0.00362860179 0.00447435444]
+Current Time: 17:57:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.00398250297
+Current Time: 18:18:52
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.00530882878
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00605585566 0.0647801384 0.0863320827 0.0743436366 0.148378745 0.0362738669 0.00291239819 0.00185016298]
+Current Time: 18:18:57
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.00334611814
+Current Time: 18:40:01
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.0043913275
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00519823749 0.0376698561 0.0800132677 0.0730786696 0.132510841 0.0344503075 0.00143270846 0.000695914554]
+Current Time: 18:40:06
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.00297507714
+Current Time: 19:01:10
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.00511270249
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0060813427 0.0672717541 0.0844931901 0.072499074 0.146437258 0.0345432535 0.00130786223 0.00134346471]
+Current Time: 19:01:15
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.00283683697
+Current Time: 19:22:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.0040292372
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00486104796 0.0367941298 0.0760881081 0.0696238 0.126667202 0.031973321 0.000823191309 0.000517817098]
+Current Time: 19:22:26
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.00275449525
+Current Time: 19:43:29
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.00392933143
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00471520191 0.0298571941 0.0735521838 0.0678409636 0.121232346 0.0315832309 0.000804444309 0.000572151097]
+Current Time: 19:43:34
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.00271926844
+Current Time: 20:04:40
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.00420604041
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00506040687 0.0434105583 0.0772172436 0.0689163059 0.13105315 0.0316822901 0.0010001146 0.000784888398]
+Current Time: 20:04:45
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.00268990663
+Current Time: 20:25:45
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.00392607599
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00478221849 0.0356745273 0.0747958347 0.0678694099 0.125233039 0.0312850624 0.000691512483 0.000470135943]
+Current Time: 20:25:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.00267240359
+Current Time: 20:46:49
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.0039259
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00481385924 0.0358023271 0.0749942809 0.0682976246 0.125406116 0.0312791243 0.000391739071 0.000397529628]
+Current Time: 20:46:53
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.00266293902
+Current Time: 21:07:56
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.00398250343
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00488063 0.0371302776 0.0757453069 0.0686105788 0.127166539 0.0314588211 0.000459343544 0.00043968379]
+Current Time: 21:08:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.00265637645
+Current Time: 21:29:06
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.00396785792
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0048636361 0.0372143388 0.0754969493 0.068436034 0.126758501 0.0312963165 0.000380311074 0.000398216973]
+Current Time: 21:29:11
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.00265049213
+Current Time: 21:50:21
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 1
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 16)                48        
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_3 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_4 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_5 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_6 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_7 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 51        
+=================================================================
+Total params: 2,003
+Trainable params: 2,003
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+Epoch 13: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 16, Seed: 2
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.572812438
+Current Time: 22:11:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 22:11:33
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.572810054
+Current Time: 22:32:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 22:32:35
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.572813094
+Current Time: 22:53:40
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 22:53:45
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.572815776
+Current Time: 23:15:18
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 23:15:23
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.572807908
+Current Time: 23:36:57
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 23:37:02
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.57281363
+Current Time: 23:58:41
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 2
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 16)                48        
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_3 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_4 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_5 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_6 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_7 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 51        
+=================================================================
+Total params: 2,003
+Trainable params: 2,003
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+Epoch 6: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 16, Seed: 3
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.0640733242
+Current Time: 00:19:37
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.00814396
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00813798141 0.121000715 0.0999720618 0.0719820708 0.189247951 0.0386861786 0.0122937681 0.0038105608]
+Current Time: 00:19:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.00497934781
+Current Time: 00:40:39
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.00646169484
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0057281279 0.0493504 0.0863620341 0.0792252 0.142657712 0.0372031853 0.0127235036 0.00581301888]
+Current Time: 00:40:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.00427651871
+Current Time: 01:01:34
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.00420050044
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00486623077 0.037083514 0.076345548 0.0690166354 0.126811326 0.0332086533 0.00178084942 0.00114085514]
+Current Time: 01:01:39
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.00355036836
+Current Time: 01:22:32
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.00434352271
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00510825962 0.0280909631 0.0766965449 0.0705049485 0.124064915 0.0355197787 0.00158351706 0.00108379964]
+Current Time: 01:22:37
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.00304859318
+Current Time: 01:43:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.00405497616
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00491850171 0.0329547189 0.0756792054 0.0687924922 0.125541091 0.0327040292 0.000601369364 0.000524768198]
+Current Time: 01:43:35
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.00286603253
+Current Time: 02:04:27
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.00387604698
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0046898 0.0333166048 0.0736719 0.0668762699 0.122623794 0.0315156318 0.00078613573 0.000654579664]
+Current Time: 02:04:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.0027578536
+Current Time: 02:25:26
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.0040922286
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00486242259 0.0368700884 0.0755036101 0.0686882958 0.126317471 0.031505052 0.00160553504 0.000649246154]
+Current Time: 02:25:31
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.00271219434
+Current Time: 02:46:25
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.00421601487
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00515040336 0.045267839 0.0781872049 0.06924925 0.133484036 0.0318283141 0.000491513754 0.000533809885]
+Current Time: 02:46:30
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.00268217316
+Current Time: 03:07:23
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.00391597627
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00478931 0.0369365476 0.0739699528 0.0666306913 0.124545768 0.0307334084 0.000516972505 0.000379812875]
+Current Time: 03:07:28
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.0026629935
+Current Time: 03:28:21
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.00388751458
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00475033745 0.0347973108 0.074402146 0.0677711666 0.124240674 0.0311946012 0.000393553433 0.000385219319]
+Current Time: 03:28:25
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.0026539797
+Current Time: 03:49:20
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.00389334373
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0047668051 0.0350677557 0.0743957 0.0675226524 0.124428131 0.0312363207 0.000438473246 0.000499123242]
+Current Time: 03:49:25
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.00264496286
+Current Time: 04:10:19
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.00386292464
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00474101678 0.035044957 0.0739986673 0.0669989 0.12406534 0.0309317559 0.000429809908 0.000408086285]
+Current Time: 04:10:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.00264400826
+Current Time: 04:31:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 12
+Loss 'Supervised_PINNS': 0.00390755711
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00478890538 0.0358218215 0.074379243 0.0672009885 0.124969192 0.0309675597 0.000311352138 0.000366783817]
+Current Time: 04:31:35
+
+-----------------------------------------------------------------------------
+Training Epoch: 13
+Loss 'Supervised_PINNS': 0.00263941404
+Current Time: 04:52:40
+
+-----------------------------------------------------------------------------
+Validation Epoch 13
+Loss 'Supervised_PINNS': 0.00388486334
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00477177 0.035511259 0.0743647888 0.067327 0.124746278 0.0310211107 0.000344067812 0.000359690806]
+Current Time: 04:52:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 14
+Loss 'Supervised_PINNS': 0.00263667828
+Current Time: 05:13:48
+
+-----------------------------------------------------------------------------
+Validation Epoch 14
+Loss 'Supervised_PINNS': 0.00387452566
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00475795288 0.0351837762 0.0741598234 0.0671340451 0.124364763 0.0309806708 0.00031323533 0.000359738304]
+Current Time: 05:13:53
+
+-----------------------------------------------------------------------------
+Training Epoch: 15
+Loss 'Supervised_PINNS': 0.00263692113
+Current Time: 05:35:07
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 3
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 16)                48        
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_3 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_4 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_5 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_6 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_7 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 51        
+=================================================================
+Total params: 2,003
+Trainable params: 2,003
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+
+Epoch 14: LearningRateScheduler setting learning rate to 2.5118864315095797e-06.
+
+Epoch 15: LearningRateScheduler setting learning rate to 1.5848931924611143e-06.
+
+Epoch 16: LearningRateScheduler setting learning rate to 1.0000000000000002e-06.
+Epoch 16: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 16, Seed: 4
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.0749317706
+Current Time: 05:56:22
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.00736220786
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00673808763 0.0621281303 0.098320812 0.0875400826 0.164906785 0.0425155573 0.0133462409 0.00649556285]
+Current Time: 05:56:29
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.00473761372
+Current Time: 06:17:39
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.00583313638
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00579646649 0.0607483573 0.0855738297 0.0741306841 0.147001117 0.0355897024 0.00838527549 0.00382106076]
+Current Time: 06:17:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.00402932428
+Current Time: 06:38:45
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.00461888127
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00493293349 0.0273924917 0.0736114755 0.0682318732 0.118147463 0.0344550908 0.00443737581 0.0023576119]
+Current Time: 06:38:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.00328898
+Current Time: 06:59:48
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.00428007916
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00499286875 0.0417344309 0.0774927363 0.069039695 0.130759314 0.0326792113 0.00196091668 0.00088917]
+Current Time: 06:59:52
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+Loss 'Supervised_PINNS': 0.00301895128
+Current Time: 07:20:56
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.00409599
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00478802854 0.0376364328 0.0750374123 0.0669947937 0.126441032 0.031676393 0.00139839435 0.00105660642]
+Current Time: 07:21:01
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+Loss 'Supervised_PINNS': 0.00287723378
+Current Time: 07:42:13
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.00402881
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00476549147 0.0289372951 0.0736934766 0.0676640198 0.121084452 0.0323319472 0.00112062448 0.00101622345]
+Current Time: 07:42:18
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+Loss 'Supervised_PINNS': 0.00279980758
+Current Time: 08:04:03
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.00414740155
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00482948869 0.038104441 0.0756482631 0.0680888146 0.127017871 0.0318380892 0.0012460443 0.00138837472]
+Current Time: 08:04:08
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+Loss 'Supervised_PINNS': 0.00276468089
+Current Time: 08:25:28
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.0041101547
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00489382911 0.0409035534 0.0758023933 0.0676833764 0.128320441 0.0314033814 0.000873846468 0.00117109949]
+Current Time: 08:25:33
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+Loss 'Supervised_PINNS': 0.00273146969
+Current Time: 08:47:16
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.00392438658
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00470313849 0.0342997387 0.0740319416 0.0670824125 0.123610318 0.0314030759 0.000754738576 0.000894692144]
+Current Time: 08:47:21
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+Loss 'Supervised_PINNS': 0.00271372404
+Current Time: 09:08:38
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.00398922246
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00476344675 0.0357786678 0.0747716129 0.0676684752 0.125193432 0.0314529203 0.000890550902 0.00100322091]
+Current Time: 09:08:43
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+Loss 'Supervised_PINNS': 0.00270058028
+Current Time: 09:30:04
+
+-----------------------------------------------------------------------------
+Validation Epoch 10
+Loss 'Supervised_PINNS': 0.00403418625
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00480621168 0.0365895182 0.07536 0.0679801255 0.126506045 0.0315938257 0.000800469192 0.000949782319]
+Current Time: 09:30:09
+
+-----------------------------------------------------------------------------
+Training Epoch: 11
+Loss 'Supervised_PINNS': 0.00269234786
+Current Time: 09:51:50
+
+-----------------------------------------------------------------------------
+Validation Epoch 11
+Loss 'Supervised_PINNS': 0.00401514815
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00481466064 0.0369834788 0.0752881393 0.0678653419 0.126453176 0.0315458961 0.000719819451 0.000959011144]
+Current Time: 09:51:55
+
+-----------------------------------------------------------------------------
+Training Epoch: 12
+Loss 'Supervised_PINNS': 0.00268899277
+Current Time: 10:13:11
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz
+
+validation_filename: /gpfs/scratch/bsc44/bsc44529/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [0.0, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 0.0001
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 8
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 4
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 30
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 10000000
+
+make_plots: False
+
+visualization_step: 100
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (2097152, 2)
+Shape training targets: (2097152, 3)
+
+Training Number of Batches per Epoch: 131072, with number of samples 2097152 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (0.0000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0011,0.8532)
+Min-Max after scaling, validation dataset: (0.0011,0.9185)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9108)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3658,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1741,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9455)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+
+Dataset Validation: 
+<BatchDataset shapes: ((None, 2), (None, 3)), types: (tf.float32, tf.float32)>
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 2)]               0         
+_________________________________________________________________
+dense (Dense)                (None, 16)                48        
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_3 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_4 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_5 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_6 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_7 (Dense)              (None, 16)                272       
+_________________________________________________________________
+dense_8 (Dense)              (None, 3)                 51        
+=================================================================
+Total params: 2,003
+Trainable params: 2,003
+Non-trainable params: 0
+_________________________________________________________________
+None
+Learning rate scheduler defined. Learning rate will decay exponentially, with:
+    initial learning rate: 1.0000e-03
+    decay rate: 1.0000e-01
+    decay step: 5.0000e+00
+
+Epoch 1: LearningRateScheduler setting learning rate to 0.001.
+
+Epoch 2: LearningRateScheduler setting learning rate to 0.0006309573444801933.
+
+Epoch 3: LearningRateScheduler setting learning rate to 0.00039810717055349724.
+
+Epoch 4: LearningRateScheduler setting learning rate to 0.000251188643150958.
+
+Epoch 5: LearningRateScheduler setting learning rate to 0.00015848931924611134.
+
+Epoch 6: LearningRateScheduler setting learning rate to 0.0001.
+
+Epoch 7: LearningRateScheduler setting learning rate to 6.309573444801933e-05.
+
+Epoch 8: LearningRateScheduler setting learning rate to 3.9810717055349735e-05.
+
+Epoch 9: LearningRateScheduler setting learning rate to 2.5118864315095798e-05.
+
+Epoch 10: LearningRateScheduler setting learning rate to 1.5848931924611134e-05.
+
+Epoch 11: LearningRateScheduler setting learning rate to 1.0000000000000003e-05.
+
+Epoch 12: LearningRateScheduler setting learning rate to 6.3095734448019305e-06.
+
+Epoch 13: LearningRateScheduler setting learning rate to 3.981071705534974e-06.
+Epoch 13: early stopping
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+Hidden Layers: 8, Neurons per hidden layer: 16, Seed: 5
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Loss 'Supervised_PINNS': 0.572812259
+Current Time: 10:34:16
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 10:34:23
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Loss 'Supervised_PINNS': 0.572816491
+Current Time: 10:55:23
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 10:55:28
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+Loss 'Supervised_PINNS': 0.572818577
+Current Time: 11:16:27
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 11:16:32
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+Loss 'Supervised_PINNS': 0.572810471
+Current Time: 11:37:30
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.572470129
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.465595037 1 1 1 1 1 1 1]
+Current Time: 11:37:35
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+slurmstepd: error: *** JOB 6503479 ON p9r3n15 CANCELLED AT 2022-12-27T11:52:38 DUE TO TIME LIMIT ***
