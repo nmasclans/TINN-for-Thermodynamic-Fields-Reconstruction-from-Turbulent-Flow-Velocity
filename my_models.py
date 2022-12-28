@@ -87,7 +87,7 @@ class MLP(models.Model):
             for nbatch, (features, targets_gt) in enumerate(dataset_val):
                 targets_pred, loss_batch, metric_batch = self.test_step(features, targets_gt)
                 if args.make_plots:
-                    visualize_prediction(targets_gt, targets_pred, epoch, args)
+                    visualize_prediction(targets_gt, targets_pred, epoch, nbatch, args)
                 loss_val.assign_add(loss_batch) 
                 metric_val.assign_add(metric_batch)
             loss_val.assign(loss_val/(nbatch+1))

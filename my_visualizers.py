@@ -7,14 +7,14 @@ from matplotlib import pyplot as plt
 # Plot the quantities of the validation dataset, single validation batch
 # Plot scatterplot + histogram
 
-def visualize_prediction(y_gt, y_pred, epoch, args):
+def visualize_prediction(y_gt, y_pred, epoch, batch, args):
     palette = sns.color_palette("muted")
     for target_idx in range(args.num_targets):
         y_gt_0   = y_gt[:,target_idx]
         y_pred_0 = y_pred[:,target_idx]
         target_name = args.targets_name[target_idx]
         # probability distribution
-        fig_title = f"{target_name}_kde_epoch_{epoch}"
+        fig_title = f"{target_name}_kde_E{epoch}_B{batch}.png"
         plt.figure()
         sns.histplot(data=y_gt_0,color=palette[0],bins=100,label="ground-truth")
         sns.histplot(data=y_pred_0,color=palette[1],bins=100,label="prediction")
@@ -25,7 +25,7 @@ def visualize_prediction(y_gt, y_pred, epoch, args):
         plt.close()
         # print(f"Visualization of validation results in '{fig_title}'")
         # scatter plot
-        fig_title = f"{target_name}_scatterplot_epoch_{epoch}"
+        fig_title = f"{target_name}_scatterplot_E{epoch}_B{batch}.png"
         plt.figure()
         plt.scatter(x=y_gt_0[::args.visualization_step],y=y_pred_0[::args.visualization_step],s=1)
         plt.xlabel(f'scaled {target_name} (ground truth)')

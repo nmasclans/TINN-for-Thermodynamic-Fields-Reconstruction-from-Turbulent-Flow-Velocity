@@ -6,6 +6,7 @@ class Supervised_PINNS(tf.keras.losses.Loss):
     def __init__(self, args):
         super().__init__(name="Supervised_PINNS")
         self.loss_weights = args.Supervised_PINNS_weights
+        self.loss_weights_first_epoch = args.Supervised_PINNS_weights_first_epoch
         assert sum(self.loss_weights) == 1.0
 
         # ---- For calculating Relative Errors in Physics Equations ----
@@ -103,8 +104,13 @@ class Supervised_PINNS(tf.keras.losses.Loss):
         loss_RE_CpEq = tf.reduce_mean(tf.math.abs((c_p-c_p_equation)/c_p_equation))
 
         # ------------------------------------ Total Loss -----------------------------------
-        loss_supervised_PINNS = self.loss_weights[0]*loss_Supervised + self.loss_weights[1]*loss_RE_StateRealGas + self.loss_weights[2]*loss_RE_CpEq
-        
+        if self.epoch == 0:
+            loss_supervised_PINNS = self.loss_weights_first_epoch[0]*loss_Supervised + self.loss_weights_first_epoch[1]*loss_RE_StateRealGas + self.loss_weights_first_epoch[2]*loss_RE_CpEq
+            tf.print('loss_weights_first_epoch used')
+        else: 
+            loss_supervised_PINNS = self.loss_weights[0]*loss_Supervised + self.loss_weights[1]*loss_RE_StateRealGas + self.loss_weights[2]*loss_RE_CpEq
+            tf.print('loss_weights (not first_epoch) used')
+
         return loss_supervised_PINNS
 
 
