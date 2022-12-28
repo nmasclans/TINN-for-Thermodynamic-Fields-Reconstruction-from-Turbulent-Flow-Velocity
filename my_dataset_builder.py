@@ -6,32 +6,36 @@ def get_datasets(args):
 
     assert args.targets_name == ['c_p', 'rho', 'T'], "Incorrect targets_name list, code implemented for --targets_name = ['c_p','rho','T']"
     args.features_name = []
+    num_snapshots_tr    = len(args.training_filename)
+    num_snapshots_val   = len(args.validation_filename)
 
-    # ----- Import data -----
+    # ----- Import Data from One or Multiple Snapshots -----
 
-    features_tr  = np.zeros(shape = args.spatial_dimension + [args.num_features,], dtype=np.float32)
-    features_val = np.zeros(shape = args.spatial_dimension + [args.num_features,], dtype=np.float32)
-    targets_tr   = np.zeros(shape = args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
-    targets_val  = np.zeros(shape = args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
+    features_tr  = np.zeros(shape = [num_snapshots_tr,]  + args.spatial_dimension + [args.num_features,], dtype=np.float32)
+    features_val = np.zeros(shape = [num_snapshots_val,] + args.spatial_dimension + [args.num_features,], dtype=np.float32)
+    targets_tr   = np.zeros(shape = [num_snapshots_tr,]  + args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
+    targets_val  = np.zeros(shape = [num_snapshots_val,] + args.spatial_dimension + [args.num_targets,],  dtype=np.float32)
     
     # Training data:
-    with np.load(args.training_filename) as f:
-        features_data  = f['x']
-        all_features_name = f['features_names']
-        for ii in range(args.num_features):
-            features_tr[:,:,:,ii] = features_data[:,:,:,args.features_idx[ii]]
-            args.features_name.append(all_features_name[args.features_idx[ii]])
-        for tt in range(args.num_targets):
-            targets_tr[:,:,:,tt]  = f[args.targets_name[tt]]
+    for i_file in range(num_snapshots_tr):
+        with np.load(args.training_filename[i_file]) as f:
+            features_data  = f['x']
+            all_features_name = f['features_names']
+            for ii in range(args.num_features):
+                features_tr[i_file,:,:,:,ii] = features_data[:,:,:,args.features_idx[ii]]
+                args.features_name.append(all_features_name[args.features_idx[ii]])
+            for tt in range(args.num_targets):
+                targets_tr[i_file,:,:,:,tt]  = f[args.targets_name[tt]]
 
     # Validation data:
-    with np.load(args.validation_filename) as f:
-        features_data  = f['x']
-        # features_names = f['features_names']
-        for ii in range(args.num_features):
-            features_val[:,:,:,ii] = features_data[:,:,:,args.features_idx[ii]]
-        for tt in range(args.num_targets):
-            targets_val[:,:,:,tt]  = f[args.targets_name[tt]]
+    for i_file in range(num_snapshots_val):
+        with np.load(args.validation_filename[i_file]) as f:
+            features_data  = f['x']
+            # features_names = f['features_names']
+            for ii in range(args.num_features):
+                features_val[i_file,:,:,:,ii] = features_data[:,:,:,args.features_idx[ii]]
+            for tt in range(args.num_targets):
+                targets_val[i_file,:,:,:,tt]  = f[args.targets_name[tt]]
 
     # Reshape, to get one discretized node as NN input (Scalar Input):
     features_tr  = features_tr.reshape(-1,  args.num_features)
@@ -41,6 +45,8 @@ def get_datasets(args):
     args.num_batches_per_epoch = int(features_tr.shape[0]/args.batch_size)
     print(f"\nShape training features: {features_tr.shape}")
     print(f"Shape training targets: {targets_tr.shape}")
+    print(f"\nFeatures name: {args.features_name}")
+    print(f"Targets name: {args.targets_name}")
     print(f"\nTraining Number of Batches per Epoch: {args.num_batches_per_epoch}, with number of samples {features_tr.shape[0]} and batch size {args.batch_size}")
 
     # Normalize features and targets data
@@ -80,7 +86,7 @@ def get_datasets(args):
     features_val_tf = tf.convert_to_tensor(features_val, dtype=np.float32)
     targets_val_tf  = tf.convert_to_tensor(targets_val,  dtype=np.float32)
     dataset_tr      = tf.data.Dataset.from_tensor_slices((features_tr_tf, targets_tr_tf))
-    dataset_tr      = dataset_tr.shuffle(buffer_size=np.product(args.spatial_dimension), seed=args.seed).batch(args.batch_size)
+    dataset_tr      = dataset_tr.shuffle(buffer_size=dataset_tr.cardinality(), seed=args.seed).batch(args.batch_size)
     dataset_val     = tf.data.Dataset.from_tensor_slices((features_val_tf, targets_val_tf))
     dataset_val     = dataset_val.batch(args.batch_size_validation)
     print(f"\nDataset Training: \n{dataset_tr}")

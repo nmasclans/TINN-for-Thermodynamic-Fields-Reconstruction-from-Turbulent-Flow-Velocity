@@ -8,8 +8,8 @@ def get_arguments():
     parser.add_argument("--ndim", default=3, type=int, help="problem dimensions")
     parser.add_argument("--features_idx", default=[1,2], type=str, help="Selected features index")
     parser.add_argument("--targets_name", default=['c_p','rho','T'], type=str, help="Selected targets name")
-    parser.add_argument("--training_filename", default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz', type=str, help="List of training filenames (abspath)")
-    parser.add_argument("--validation_filename", default='/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz', type=str, help="List of validation filenames (abspath)")
+    parser.add_argument("--training_filename", default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz',], help="List of training filenames (abspath)")
+    parser.add_argument("--validation_filename", default=['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',], help="List of validation filenames (abspath)")
     parser.add_argument("--spatial_dimension", default=[128,128,128], type=list, help="Spatial discretization, grid of statistics data. Equals the shape of the stored quantities in 'statistic")
     # Min-Max Scaling
     parser.add_argument("--features_limits", 
