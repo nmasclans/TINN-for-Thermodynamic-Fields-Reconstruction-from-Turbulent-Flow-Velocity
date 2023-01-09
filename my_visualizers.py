@@ -1,5 +1,4 @@
 import numpy as np
-import seaborn as sns
 from matplotlib import pyplot as plt
 
 # Results Visualizaton
@@ -8,7 +7,6 @@ from matplotlib import pyplot as plt
 # Plot scatterplot + histogram
 
 def visualize_prediction(y_gt, y_pred, epoch, batch, args):
-    palette = sns.color_palette("muted")
     for target_idx in range(args.num_targets):
         y_gt_0   = y_gt[:,target_idx]
         y_pred_0 = y_pred[:,target_idx]
@@ -16,8 +14,8 @@ def visualize_prediction(y_gt, y_pred, epoch, batch, args):
         # probability distribution
         fig_title = f"{target_name}_kde_E{epoch}_B{batch}.png"
         plt.figure()
-        sns.histplot(data=y_gt_0,color=palette[0],bins=100,label="ground-truth")
-        sns.histplot(data=y_pred_0,color=palette[1],bins=100,label="prediction")
+        plt.hist(x=y_gt_0,  bins=100,label="ground-truth")
+        plt.hist(x=y_pred_0,bins=100,label="prediction")
         plt.xlim([args.min_value, args.max_value])
         plt.ylabel(f"{target_name} kde, density of probability")
         plt.legend()
