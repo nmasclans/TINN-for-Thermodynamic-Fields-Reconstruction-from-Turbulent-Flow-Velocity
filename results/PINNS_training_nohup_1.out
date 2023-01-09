@@ -1,0 +1,804 @@
+/bin/bash: /home/jofre/Students/Nuria_Masclans/miniconda3/envs/tf-gpu/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+                                    Seed: 4
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: ['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_52100000_KGP_P.npz', '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz']
+
+validation_filename: ['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz']
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [-0.1, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 1e-05
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.8, 0.1, 0.1]
+
+Supervised_PINNS_weights_first_epoch: [0.8, 0.1, 0.1]
+
+num_hidden_layers: 6
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 4
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 100
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+num_batches_per_print_information: 5000
+
+make_plots: True
+
+visualization_step: 200
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape training features: (4194304, 2)
+Shape training targets: (4194304, 3)
+
+Features name: ['u', 'TKE_normalized', 'u', 'TKE_normalized']
+Targets name: ['c_p', 'rho', 'T']
+
+Training Number of Batches per Epoch: 262144, with number of samples 4194304 and batch size 16
+
+Min-Max Scaler to feature 'u', from (min, max) = (-0.1000, 3.5000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0268,0.8573)
+Min-Max after scaling, validation dataset: (0.0288,0.9207)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.0000,0.9377)
+Min-Max after scaling, validation dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.3653,0.9223)
+Min-Max after scaling, validation dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.1738,0.9870)
+Min-Max after scaling, validation dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling,  training  dataset: (0.4736,0.9464)
+Min-Max after scaling, validation dataset: (0.4736,0.9464)
+
+Dataset Training: 
+<BatchDataset element_spec=(TensorSpec(shape=(None, 2), dtype=tf.float32, name=None), TensorSpec(shape=(None, 3), dtype=tf.float32, name=None))>
+
+Dataset Validation: 
+<BatchDataset element_spec=(TensorSpec(shape=(None, 2), dtype=tf.float32, name=None), TensorSpec(shape=(None, 3), dtype=tf.float32, name=None))>
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 2)]               0         
+                                                                 
+ dense (Dense)               (None, 16)                48        
+                                                                 
+ dense_1 (Dense)             (None, 16)                272       
+                                                                 
+ dense_2 (Dense)             (None, 16)                272       
+                                                                 
+ dense_3 (Dense)             (None, 16)                272       
+                                                                 
+ dense_4 (Dense)             (None, 16)                272       
+                                                                 
+ dense_5 (Dense)             (None, 16)                272       
+                                                                 
+ dense_6 (Dense)             (None, 3)                 51        
+                                                                 
+=================================================================
+Total params: 1,459
+Trainable params: 1,459
+Non-trainable params: 0
+_________________________________________________________________
+
+-----------------------------------------------------------------------------
+Training Epoch: 0
+Supervised PINNS Loss weights are set to: [0.8, 0.1, 0.1]
+WARNING:tensorflow:5 out of the last 5 calls to <function _BaseOptimizer._update_step_xla at 0x7f7b2418bd30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:tensorflow:6 out of the last 6 calls to <function _BaseOptimizer._update_step_xla at 0x7f7b2418bd30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.0165007543
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.0130908191
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.0104670785
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.0148014426
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00455428706
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00847142376
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.0122864051
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00549800182
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.0147003559
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.0241789278
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00321139349
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00548764504
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00306947576
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00303896633
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00398644153
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00508069154
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00267648231
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.0028949494
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00888531376
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.0028964628
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.0122417295
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00173342181
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00318662031
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.0130407112
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00511438539
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.013365075
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00315584429
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.0205970407
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00174415135
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00281902635
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00270593818
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00241532293
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00260199234
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00223420514
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00330445589
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00320543558
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00498016458
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00517337956
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00235792366
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.0116083734
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00177701272
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00187710067
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00156593404
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00339267566
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00327383145
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00381551939
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00345154642
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.00520517351
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00381899136
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.0131861176
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00555465464
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00309824781
+Loss 'Supervised_PINNS': 0.00669440581
+Current Time: 08:59:33
+
+-----------------------------------------------------------------------------
+Validation Epoch 0
+Loss 'Supervised_PINNS': 0.00903969258
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00775606185 0.0911593437 0.105126143 0.085211888 0.18780829 0.0423582494 0.0179236233 0.0104248039]
+Current Time: 08:59:41
+
+-----------------------------------------------------------------------------
+Training Epoch: 1
+Supervised PINNS Loss weights are set to: [0.8, 0.1, 0.1]
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00278974837
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00307151349
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00274646492
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00275666453
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00213270844
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.0336825401
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.0143954875
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00136162282
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00491811335
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.000806068652
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.012239811
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00209163874
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00247581513
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00270270905
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00475900527
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00291545037
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00255204854
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.0141489143
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00464429893
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.0134031633
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00361435791
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00310257357
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.0256274026
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00324591412
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00576800108
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00199411507
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00458557438
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00455778744
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00234569726
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00352824247
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.0114066862
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.0102179274
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.0219854638
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00551844202
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00207299506
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00252372352
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.0163824223
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00201650383
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00247889897
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.00212763669
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.0012617663
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.0100070415
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00311510824
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00246930961
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00271972781
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00208423566
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00316861365
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.00445421971
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.002257274
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.0176232494
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00198372174
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00194388395
+Loss 'Supervised_PINNS': 0.00460422505
+Current Time: 09:29:59
+
+-----------------------------------------------------------------------------
+Validation Epoch 1
+Loss 'Supervised_PINNS': 0.00538496766
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00625913078 0.0663767383 0.090711832 0.0781577155 0.156125993 0.0378517807 0.00271875714 0.0010578701]
+Current Time: 09:30:07
+
+-----------------------------------------------------------------------------
+Training Epoch: 2
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00305390125
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00111964415
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00112582732
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.0015285369
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00139418792
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.0126473
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.0022699961
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00250994042
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00351909827
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00113845617
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00152856391
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00337003637
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.0112683605
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00146882446
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00243559247
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00227910932
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00264500012
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00289992685
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00196472509
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00225832895
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00401620381
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00249096472
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00170960964
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00241943635
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00285598822
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00173285801
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00192175619
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00158572686
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00244390429
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00264446437
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00194813532
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00442823814
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00144969462
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.0024646204
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00106077828
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00215494749
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00149106444
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00296862982
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00282233511
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.00125531596
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00162511365
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00222831476
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00159116636
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00352807762
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00257982919
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.0126850829
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00292746141
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.00222299783
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00118922035
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.0018049241
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00277947914
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00273546576
+Loss 'Supervised_PINNS': 0.00413942104
+Current Time: 10:00:22
+
+-----------------------------------------------------------------------------
+Validation Epoch 2
+Loss 'Supervised_PINNS': 0.00556414202
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00644882256 0.0644556805 0.0915246233 0.0781732649 0.158922985 0.0374776423 0.00205488014 0.00199595978]
+Current Time: 10:00:30
+
+-----------------------------------------------------------------------------
+Training Epoch: 3
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00247234292
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00175335037
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00221778685
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00183000206
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00198944286
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00214437791
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00256646145
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.0013625531
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00246604905
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00281896396
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00263066706
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00215399219
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00184608612
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.0117871612
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.0101545639
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00696225045
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00197440526
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.000884792
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00222002366
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00171433098
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00166378124
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00281100394
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.0136449896
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.0029912726
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00225178548
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00132071879
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00154565019
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00125325727
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00881314464
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00113009871
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00141945318
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00272170128
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00870217849
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00118950591
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00186516554
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.0010813768
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00143603119
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00195191731
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00143708941
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.0016109253
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00533825066
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00145739166
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00137177703
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00141025183
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00211628596
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00114275608
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.000837209867
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.0017585638
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.0010281509
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00163388171
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.0125010591
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00366428611
+Loss 'Supervised_PINNS': 0.00348492898
+Current Time: 10:30:10
+
+-----------------------------------------------------------------------------
+Validation Epoch 3
+Loss 'Supervised_PINNS': 0.00462971628
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00552872941 0.0497556217 0.0836759806 0.0730817467 0.14372851 0.0342176855 0.000874070276 0.00119325588]
+Current Time: 10:30:18
+
+-----------------------------------------------------------------------------
+Training Epoch: 4
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00132278178
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00104255951
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.000852577738
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00119262375
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00149856717
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00316217844
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00156627235
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.000699288445
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00275489036
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.0107461503
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00184383162
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00162270106
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00231574639
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00248106383
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00215870794
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00147295254
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00138198421
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00261203758
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00182235905
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00209186156
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00185891136
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.0031143243
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.000912531395
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00117011
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00154625648
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00267033558
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00184823398
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00167539285
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00189970725
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00479504047
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.000960828969
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00199102354
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00319807837
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00193532184
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00225765258
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00302765751
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00299424701
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00146700954
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00192034035
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.00117103534
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00243695453
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00424896227
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.000919579354
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00373388338
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00205513067
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00260817376
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.0023725545
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.00144736678
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00226789876
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00287939981
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.0021402142
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00223991298
+Loss 'Supervised_PINNS': 0.00291774143
+Current Time: 11:00:38
+
+-----------------------------------------------------------------------------
+Validation Epoch 4
+Loss 'Supervised_PINNS': 0.00479858788
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00577480532 0.0554963201 0.0850331485 0.073354654 0.147829756 0.0339150466 0.00110982603 0.000677613]
+Current Time: 11:00:45
+
+-----------------------------------------------------------------------------
+Training Epoch: 5
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00190691161
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00157212734
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00286946516
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00213122135
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.0014994971
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00196698681
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00309864176
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00147568213
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.000675696
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00308614015
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00260877912
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00242964621
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00156596699
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.000946561166
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.0038172002
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00130287907
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00137273956
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00148947793
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.000789602404
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.000865774811
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00149477937
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00177347672
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00177679
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00182974513
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.000700355042
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00115270459
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00125703216
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00191111979
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00156812801
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00121819088
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00168708246
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.0015332246
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.000707599451
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.000664434221
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00152509438
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00105935126
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.0030175976
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00153074553
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00228602509
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.00138112169
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.000707193103
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00158766285
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00123271171
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00128355052
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00174186472
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00124530913
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00100446469
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.00288298167
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00116996048
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00131097925
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00267517706
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.0143945348
+Loss 'Supervised_PINNS': 0.00279470813
+Current Time: 11:30:50
+
+-----------------------------------------------------------------------------
+Validation Epoch 5
+Loss 'Supervised_PINNS': 0.00442172587
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00537638925 0.0427320786 0.081726715 0.0726303607 0.139205515 0.0333442837 0.000719702453 0.000486437639]
+Current Time: 11:30:58
+
+-----------------------------------------------------------------------------
+Training Epoch: 6
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00210655876
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00148751319
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00122806069
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00474722637
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00159140769
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.0136946253
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.000955550291
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00217911
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00100165303
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00244056527
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00085727009
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00261999271
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00080711121
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00189227308
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00148198311
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00383115374
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00255746976
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00237301551
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00165439432
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00210629404
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00227216678
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00187738054
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00116577453
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00122509431
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00272960099
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00129376887
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00145194191
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00234434218
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00206332351
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00135776203
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00241560745
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00130000047
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00201218668
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00263836165
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00265926425
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.000467305566
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00233864621
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00188085798
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00084406283
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.000941729289
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.000987740816
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.0026085279
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00228957622
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00125889946
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00130181515
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.0015111533
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00255986582
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.000997563591
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.0092668226
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00151317159
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.000488928112
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00147400936
+Loss 'Supervised_PINNS': 0.00272698025
+Current Time: 12:01:17
+
+-----------------------------------------------------------------------------
+Validation Epoch 6
+Loss 'Supervised_PINNS': 0.00430969475
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00523785455 0.0428334884 0.0803005323 0.0715444759 0.136566073 0.0327910408 0.000735057693 0.000459055329]
+Current Time: 12:01:24
+
+-----------------------------------------------------------------------------
+Training Epoch: 7
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00142419955
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00321412762
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00153822172
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00110657548
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00271241437
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00168970297
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00249180547
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00117941573
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.000976485957
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00420847256
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00215211883
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00133708841
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00352764898
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00146735797
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00192152755
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00182586641
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.00220566848
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00139657827
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00240952312
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00148861296
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00156730297
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00123134372
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00250670733
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00136182166
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00348173175
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.000958802179
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00472605741
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00128360174
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00178993575
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00198480044
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.000996086514
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00357185095
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.029041823
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00156996015
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.0012048583
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00278172665
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00260505429
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00296813133
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00179415941
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.00112429983
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00200287951
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00199414697
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.0122887017
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00177703693
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00168745464
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.0011197977
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00263038091
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.0010634925
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00299291918
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.000790963299
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00421026535
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.00262706191
+Loss 'Supervised_PINNS': 0.0026919581
+Current Time: 12:31:42
+
+-----------------------------------------------------------------------------
+Validation Epoch 7
+Loss 'Supervised_PINNS': 0.00420810236
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.0051513752 0.0373850241 0.0800465569 0.0726548433 0.134024382 0.0334604569 0.000493200379 0.000376824522]
+Current Time: 12:31:50
+
+-----------------------------------------------------------------------------
+Training Epoch: 8
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00120151148
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00258123409
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00177947583
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00176426419
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00521993497
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00153305382
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00101827667
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.00179356418
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00188583275
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00256728102
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00204331893
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00180569116
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00099587
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00209275587
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.000907509879
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00163754192
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.000931219
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00166374899
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00151127763
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.0100719165
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.00300523429
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00192445377
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00252072117
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.00127365394
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.00236300076
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.00296502979
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.00115934375
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00511572
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.00150044041
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00139260292
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00146105257
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00208559632
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.000580818276
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.000912739197
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00967217516
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.00175263977
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00174173771
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00591826532
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00303458725
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.000882820517
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.0154068442
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00919090211
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.00143186515
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00154414866
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.0033246188
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.0016232268
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.00103779626
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.000903054664
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.0132561158
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00113956816
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.013923848
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.000932585448
+Loss 'Supervised_PINNS': 0.00266823778
+Current Time: 13:02:10
+
+-----------------------------------------------------------------------------
+Validation Epoch 8
+Loss 'Supervised_PINNS': 0.00421743887
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00516778324 0.0393369086 0.079519935 0.0715078562 0.134217367 0.0328346044 0.000489392 0.000342731248]
+Current Time: 13:02:18
+
+-----------------------------------------------------------------------------
+Training Epoch: 9
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00155590021
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.000916365825
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.0019136573
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00291116815
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00239119795
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.000835461135
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00401273835
+    Batch: 40000 || Loss 'Supervised_PINNS': 0.0010542433
+    Batch: 45000 || Loss 'Supervised_PINNS': 0.00298966467
+    Batch: 50000 || Loss 'Supervised_PINNS': 0.00434450619
+    Batch: 55000 || Loss 'Supervised_PINNS': 0.00281462981
+    Batch: 60000 || Loss 'Supervised_PINNS': 0.00126006932
+    Batch: 65000 || Loss 'Supervised_PINNS': 0.00125632668
+    Batch: 70000 || Loss 'Supervised_PINNS': 0.00250256807
+    Batch: 75000 || Loss 'Supervised_PINNS': 0.00170991383
+    Batch: 80000 || Loss 'Supervised_PINNS': 0.00111315027
+    Batch: 85000 || Loss 'Supervised_PINNS': 0.000878800114
+    Batch: 90000 || Loss 'Supervised_PINNS': 0.00163884962
+    Batch: 95000 || Loss 'Supervised_PINNS': 0.00139924802
+    Batch: 100000 || Loss 'Supervised_PINNS': 0.00210713851
+    Batch: 105000 || Loss 'Supervised_PINNS': 0.0142281977
+    Batch: 110000 || Loss 'Supervised_PINNS': 0.00178784213
+    Batch: 115000 || Loss 'Supervised_PINNS': 0.00114988326
+    Batch: 120000 || Loss 'Supervised_PINNS': 0.0010617926
+    Batch: 125000 || Loss 'Supervised_PINNS': 0.0152120637
+    Batch: 130000 || Loss 'Supervised_PINNS': 0.000879363215
+    Batch: 135000 || Loss 'Supervised_PINNS': 0.000654059288
+    Batch: 140000 || Loss 'Supervised_PINNS': 0.00171964616
+    Batch: 145000 || Loss 'Supervised_PINNS': 0.0211348366
+    Batch: 150000 || Loss 'Supervised_PINNS': 0.00170439144
+    Batch: 155000 || Loss 'Supervised_PINNS': 0.00273251813
+    Batch: 160000 || Loss 'Supervised_PINNS': 0.00821320433
+    Batch: 165000 || Loss 'Supervised_PINNS': 0.00178164837
+    Batch: 170000 || Loss 'Supervised_PINNS': 0.00131502817
+    Batch: 175000 || Loss 'Supervised_PINNS': 0.00160731736
+    Batch: 180000 || Loss 'Supervised_PINNS': 0.000903147389
+    Batch: 185000 || Loss 'Supervised_PINNS': 0.00358307944
+    Batch: 190000 || Loss 'Supervised_PINNS': 0.00418278435
+    Batch: 195000 || Loss 'Supervised_PINNS': 0.00163708313
+    Batch: 200000 || Loss 'Supervised_PINNS': 0.000548165408
+    Batch: 205000 || Loss 'Supervised_PINNS': 0.00308339484
+    Batch: 210000 || Loss 'Supervised_PINNS': 0.00380578265
+    Batch: 215000 || Loss 'Supervised_PINNS': 0.000896186801
+    Batch: 220000 || Loss 'Supervised_PINNS': 0.00204678276
+    Batch: 225000 || Loss 'Supervised_PINNS': 0.00189945032
+    Batch: 230000 || Loss 'Supervised_PINNS': 0.00116426148
+    Batch: 235000 || Loss 'Supervised_PINNS': 0.0134182777
+    Batch: 240000 || Loss 'Supervised_PINNS': 0.010102815
+    Batch: 245000 || Loss 'Supervised_PINNS': 0.00276349252
+    Batch: 250000 || Loss 'Supervised_PINNS': 0.00116424507
+    Batch: 255000 || Loss 'Supervised_PINNS': 0.00395407667
+    Batch: 260000 || Loss 'Supervised_PINNS': 0.0018476285
+Loss 'Supervised_PINNS': 0.00265655178
+Current Time: 13:32:37
+
+-----------------------------------------------------------------------------
+Validation Epoch 9
+Loss 'Supervised_PINNS': 0.00422366802
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00517690973 0.0392351598 0.080095239 0.0724580809 0.134674862 0.0331528 0.000486585719 0.000334818586]
+Current Time: 13:32:44
+
+-----------------------------------------------------------------------------
+Training Epoch: 10
+    Batch: 5000 || Loss 'Supervised_PINNS': 0.00127602159
+    Batch: 10000 || Loss 'Supervised_PINNS': 0.00140066992
+    Batch: 15000 || Loss 'Supervised_PINNS': 0.00161482824
+    Batch: 20000 || Loss 'Supervised_PINNS': 0.00134050567
+    Batch: 25000 || Loss 'Supervised_PINNS': 0.00130495743
+    Batch: 30000 || Loss 'Supervised_PINNS': 0.00421491032
+    Batch: 35000 || Loss 'Supervised_PINNS': 0.00194193528
+./execute_in_Hybrid_trainer.sh línia 3: 1339340 Matat                   XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda python3 my_trainer.py --seed $SEED
