@@ -87,7 +87,7 @@ model = models.Model(inp, out)
 print(model.summary())
 
 # ------------------------------- LOAD TRAINED WEIGHTS --------------------------
-model.save_weights(args.ckpt_filename_prediction)
+model.load_weights(args.ckpt_filename_prediction)
 
 
 # Model + Optimizer + Loss + Metrics
