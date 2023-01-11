@@ -80,7 +80,6 @@ def get_arguments():
     args.num_features = len(args.features_idx)
     args.num_targets  = len(args.targets_name)
     args.Supervised_PINNS_weights = list(map(float,args.Supervised_PINNS_weights.split(',')))
-    args.Supervised_PINNS_weights_first_epoch = list(map(float,args.Supervised_PINNS_weights_first_epoch.split(',')))
     
     print("\nArguments:\n" + "".join(f"\n{k}: {v}\n" for k, v in vars(args).items()))
 
