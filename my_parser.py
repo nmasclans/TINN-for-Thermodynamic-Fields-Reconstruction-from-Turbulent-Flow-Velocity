@@ -44,8 +44,8 @@ def get_arguments():
     # Loss & Metrics
     parser.add_argument("--loss", default="Supervised_PINNS", type=str, help="Loss function name, accepted values = ['MSE','RSE','Supervised_PINNS']")
     parser.add_argument("--metrics", default=["MSE","RSE","RAE","RAE_target_0","RAE_target_1","RAE_target_2","RE_RealGasEq","RE_CpEq"], type=str, help="Metric function name")
-    parser.add_argument("--Supervised_PINNS_weights", default="0.8, 0.1, 0.1", type=str, help="Weights of Supervised_PINNS Loss")
-    parser.add_argument("--Supervised_PINNS_weights_first_epoch", default="0.8, 0.1, 0.1", type=str, help="Weights of Supervised_PINNS Loss")
+    parser.add_argument("--Supervised_PINNS_weights", default="0.5, 0.25, 0.25", type=str, help="Weights of Supervised_PINNS Loss, except first epoch")
+    parser.add_argument("--Supervised_PINNS_weights_first_epoch", default="1.0, 0.0, 0.0", type=str, help="Weights of Supervised_PINNS Loss, only first epoch")
     # Model Architecture
     parser.add_argument("--num_hidden_layers", default=6, type=int, help="Number of hidden layers of the model")
     parser.add_argument("--num_neurons_per_layer", default=16, type=int, help="Number of neurons per layer of the model")
@@ -70,8 +70,12 @@ def get_arguments():
     # Save checkpoints (for training + validation)
     parser.add_argument("--save_ckpt_freq", default=1, type=int, help="Save checkpoint weights every --save_ckpt_freq epochs, save no weights if 0")
     # Load checkpoints (for validation)
-    parser.add_argument("--ckpt_filename_prediction", default='checkpoints/ckpt_E8', type=str, help="Filename of load checkpoint for prediction")
-
+    parser.add_argument("--ckpt_filename_prediction", default='checkpoints/checkpoints_6513607/ckpt_E8', type=str, help="Filename of load checkpoint for prediction")
+    # Three-regime model for supercritical pseudo-boiling (SPPB)
+    parser.add_argument("--T_minus", default=123.33293, type=float, help=
+        "the onset of pseudo-boiling temperature (K), for isobaric cond. temperature of transition between liquid-like (LL) and two-phase-like (TPL)")
+    parser.add_argument("--T_plus", default=176.79862, type=float, help=    
+        "the termination of pseudo-boiling temperature (K), for isobaric cond. temperature of transition between two-phase-like (TPL) and gas-like (GL)")
 
     args = parser.parse_args()
     args.num_features = len(args.features_idx)
