@@ -1,12 +1,19 @@
 import numpy as np
 from matplotlib import pyplot as plt
-
+from matplotlib import colors
 import tensorflow as tf
 
 from my_utils import transform_targets_to_original_scaling, classify_state_from_temperature
 from my_metrics_classification import compute_metrics
 
-# Results Visualizaton
+# colormap classification
+blue_0  = [0.0,150/255,1.0,0.74]
+green_1 = [0.0,150/255,0.0,0.57]
+red_2   = [1.0,0.0,0.0,0.54]
+list_colors = np.array([blue_0, green_1, red_2])
+cmap = colors.ListedColormap(list_colors)
+bounds = [-0.5,0.5,1.5,2.5]
+norm = colors.BoundaryNorm(bounds,cmap.N)
 
 # Plot the quantities of the validation dataset, single validation batch
 # Plot scatterplot + histogram
@@ -50,22 +57,24 @@ def visualize_prediction_regression_by_xyplanes(y_gt, y_pred, epoch, batch, args
         y_pred_target_d = tf.reshape(y_pred_target, args.spatial_dimension)
         # plot imshow of middle plane z
         # ground truth
-        fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_gt.svg"
+        fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_gt.png"
+        fig_title_2 = f"figures/{target_name}_contourf_E{epoch}_B{batch}_gt.svg"
         plt.figure()
         plt.imshow(y_gt_target_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
         frame = plt.gca()
-        plt.xticks([]),plt.yticks([])
         frame.invert_yaxis()
-        plt.savefig(fig_title)
+        plt.xticks([]),plt.yticks([])
+        plt.savefig(fig_title); plt.savefig(fig_title_2)
         plt.close()
         # prediction
-        fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_pred.svg"
+        fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_pred.png"
+        fig_title_2 = f"figures/{target_name}_contourf_E{epoch}_B{batch}_pred.svg"
         plt.figure()
         plt.imshow(y_pred_target_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
         frame = plt.gca()
-        plt.xticks([]),plt.yticks([])
         frame.invert_yaxis()
-        plt.savefig(fig_title)
+        plt.xticks([]),plt.yticks([])
+        plt.savefig(fig_title); plt.savefig(fig_title_2)
         plt.close()
 
 def visualize_prediction_classification_by_xyplanes(y_gt, y_pred, epoch, batch, args):
@@ -84,20 +93,26 @@ def visualize_prediction_classification_by_xyplanes(y_gt, y_pred, epoch, batch, 
     state_pred_d = tf.reshape(state_pred, args.spatial_dimension)
     # plot contourf of middle plane z
     # ground truth
-    fig_title = f"figures/fluid_state_contourf_E{epoch}_B{batch}_gt.svg"
+    fig_title = f"figures/fluid_state_contourf_E{epoch}_B{batch}_gt.png"
+    fig_title_2 = f"figures/fluid_state_contourf_E{epoch}_B{batch}_gt.svg"
     plt.figure()
-    plt.imshow(state_gt_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
-    frame = plt.gca()
+    img = plt.imshow(state_gt_d[64,:,:], interpolation='nearest', origin='lower',
+               cmap=cmap, norm=norm)
+    plt.gca().invert_yaxis()
+    plt.axis('scaled')
+    plt.colorbar(img, cmap=cmap, norm=norm, boundaries=bounds)
     plt.xticks([]),plt.yticks([])
-    frame.invert_yaxis()
-    plt.savefig(fig_title)
+    plt.savefig(fig_title); plt.savefig(fig_title_2)
     plt.close()
     # prediction
-    fig_title = f"figures/fluid_state_contourf_E{epoch}_B{batch}_pred.svg"
+    fig_title = f"figures/fluid_state_contourf_E{epoch}_B{batch}_pred.png"
+    fig_title_2 = f"figures/fluid_state_contourf_E{epoch}_B{batch}_pred.svg"
     plt.figure()
-    plt.imshow(state_pred_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
-    frame = plt.gca()
+    img = plt.imshow(state_pred_d[64,:,:], interpolation='nearest', origin='lower',
+               cmap=cmap, norm=norm)
+    plt.gca().invert_yaxis()
+    plt.axis('scaled')
+    plt.colorbar(img, cmap=cmap, norm=norm, boundaries=bounds)
     plt.xticks([]),plt.yticks([])
-    frame.invert_yaxis()
-    plt.savefig(fig_title)
+    plt.savefig(fig_title); plt.savefig(fig_title_2)
     plt.close()
