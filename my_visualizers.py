@@ -60,7 +60,7 @@ def visualize_prediction_regression_by_xyplanes(y_gt, y_pred, epoch, batch, args
         fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_gt.png"
         fig_title_2 = f"figures/{target_name}_contourf_E{epoch}_B{batch}_gt.svg"
         plt.figure()
-        plt.imshow(y_gt_target_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
+        plt.imshow(y_gt_target_d[64,:,:],cmap='coolwarm'); plt.axis('scaled'); plt.colorbar()
         frame = plt.gca()
         frame.invert_yaxis()
         plt.xticks([]),plt.yticks([])
@@ -70,7 +70,7 @@ def visualize_prediction_regression_by_xyplanes(y_gt, y_pred, epoch, batch, args
         fig_title = f"figures/{target_name}_contourf_E{epoch}_B{batch}_pred.png"
         fig_title_2 = f"figures/{target_name}_contourf_E{epoch}_B{batch}_pred.svg"
         plt.figure()
-        plt.imshow(y_pred_target_d[64,:,:]); plt.axis('scaled'); plt.colorbar()
+        plt.imshow(y_pred_target_d[64,:,:],cmap='coolwarm'); plt.axis('scaled'); plt.colorbar()
         frame = plt.gca()
         frame.invert_yaxis()
         plt.xticks([]),plt.yticks([])

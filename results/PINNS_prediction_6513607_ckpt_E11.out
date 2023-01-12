@@ -1,0 +1,167 @@
+(tf-gpu) jofre@pc05v3:~/Students/Nuria_Masclans/repositories/NN_based_inference_in_High_Pressure_Transcritical_Turbulent_Channel_Flow$ XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda python3 my_predictor.py 
+
+Arguments:
+
+ndim: 3
+
+features_idx: [1, 2]
+
+targets_name: ['c_p', 'rho', 'T']
+
+training_filename: ['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz']
+
+validation_filename: ['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz']
+
+prediction_filename: ['/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz']
+
+spatial_dimension: [128, 128, 128]
+
+features_limits: {'y': [0.0, 0.0002], 'u': [-0.1, 3.5], 'TKE_normalized': [0.0, 0.2], 'vorticity_magn_normalized': [0.0, 55.0], 'enstrophy_normalized': [0.0, 1400.0]}
+
+targets_limits: {'c_p': [0.0, 4200.0], 'rho': [0.0, 850.0], 'T': [0.0, 200.0]}
+
+learning_rate: 0.001
+
+lr_decay: exp
+
+lr_decay_rate: 0.1
+
+lr_decay_step: 5.0
+
+lr_scheduler_call_frequency: epoch
+
+lr_verbose: 1
+
+early_stopping_min_delta: 1e-05
+
+early_stopping_patience: 5
+
+early_stopping_start_from_epoch: 0
+
+optimizer: Adam
+
+loss: Supervised_PINNS
+
+metrics: ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']
+
+Supervised_PINNS_weights: [0.7, 0.15, 0.15]
+
+num_hidden_layers: 6
+
+num_neurons_per_layer: 16
+
+activation_function: relu
+
+initializer_type: normal
+
+seed: 4
+
+regularizer_type: L2
+
+regularizer_factor: 0.01
+
+num_epochs: 100
+
+batch_size: 16
+
+batch_size_validation: 2097152
+
+batch_size_prediction: 2097152
+
+num_batches_per_print_information: 1000000
+
+make_plots: False
+
+visualization_step: 500
+
+Substance: N2
+
+P_constant: 6791600.0
+
+eps: 1e-05
+
+save_ckpt_freq: 1
+
+ckpt_filename_prediction: checkpoints/checkpoints_6513607/ckpt_E11
+
+T_minus: 123.33293
+
+T_plus: 176.79862
+
+num_features: 2
+
+num_targets: 3
+
+
+Shape prediction targets: (2097152, 3)
+
+Features name: ['u', 'TKE_normalized']
+
+Targets name: ['c_p', 'rho', 'T']
+
+Prediction Number of Batches per Epoch: 1, with number of samples 2097152 and batch size 2097152
+
+Min-Max Scaler to feature 'u', from (min, max) = (-0.1000, 3.5000) to (0, 1)
+Min-Max after scaling, prediction dataset: (0.0288,0.9207)
+
+Min-Max Scaler to feature 'TKE_normalized', from (min, max) = (0.0000, 0.2000) to (0, 1)
+Min-Max after scaling, prediction dataset: (0.0000,0.8237)
+
+Min-Max Scaler to target 'c_p', from (min, max) = (0.0000, 4200.0000) to (0, 1)
+Min-Max after scaling, prediction dataset: (0.3653,0.9224)
+
+Min-Max Scaler to target 'rho', from (min, max) = (0.0000, 850.0000) to (0, 1)
+Min-Max after scaling, prediction dataset: (0.1738,0.9870)
+
+Min-Max Scaler to target 'T', from (min, max) = (0.0000, 200.0000) to (0, 1)
+Min-Max after scaling, prediction dataset: (0.4736,0.9464)
+
+Dataset Prediction: 
+<BatchDataset element_spec=(TensorSpec(shape=(None, 2), dtype=tf.float32, name=None), TensorSpec(shape=(None, 3), dtype=tf.float32, name=None))>
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 2)]               0         
+                                                                 
+ dense (Dense)               (None, 16)                48        
+                                                                 
+ dense_1 (Dense)             (None, 16)                272       
+                                                                 
+ dense_2 (Dense)             (None, 16)                272       
+                                                                 
+ dense_3 (Dense)             (None, 16)                272       
+                                                                 
+ dense_4 (Dense)             (None, 16)                272       
+                                                                 
+ dense_5 (Dense)             (None, 16)                272       
+                                                                 
+ dense_6 (Dense)             (None, 3)                 51        
+                                                                 
+=================================================================
+Total params: 1,459
+Trainable params: 1,459
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+-----------------------------------------------------------------------------
+
+Predicting...
+Prediction done
+
+Building prediction plots....
+
+Weighted IoU: 0.770
+Per-Class IoU: 
+    liquid-like: 0.762 
+    two-phases-like: 0.929 
+    gas-like: 0.618
+
+Accuracy: 0.938
+
+Plots done
+Loss 'Supervised_PINNS': 0.00355111575
+Metric ['MSE', 'RSE', 'RAE', 'RAE_target_0', 'RAE_target_1', 'RAE_target_2', 'RE_RealGasEq', 'RE_CpEq']:
+ [0.00486220373 0.0396605097 0.0752266869 0.0672431886 0.127314225 0.0311226267 0.000512357103 0.000471463194]
+Current Time: 20:33:58
