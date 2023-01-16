@@ -6,21 +6,21 @@ def get_arguments():
     parser = argparse.ArgumentParser(description="PINN_RANS_channel_flow")
     # Dataset
     parser.add_argument("--ndim", default=3, type=int, help="problem dimensions")
-    parser.add_argument("--features_idx", default=[1,2], type=list, help="Selected features index")
+    parser.add_argument("--features_idx", default=[0,1,2,3,4], type=list, help="Selected features index")
     parser.add_argument("--targets_name", default=['c_p','rho','T'], type=list, help="Selected targets name")
     parser.add_argument("--training_filename", default=[
-        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_53900000.npz',
+        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_yuvwTKE/3d_high_pressure_turbulent_channel_flow_53900000.npz',
         ], type=list, help="List of training filenames (abspath)")
     parser.add_argument("--validation_filename", default=[
-        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',
+        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_yuvwTKE/3d_high_pressure_turbulent_channel_flow_59300000.npz',
         ], type=list, help="List of validation filenames (abspath)")
     parser.add_argument("--prediction_filename", default=[
-        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_5features_4targets/3d_high_pressure_turbulent_channel_flow_59300000.npz',
+        '/home/jofre/Students/Nuria_Masclans/datasets/post_processed/59300000_yuvwTKE/3d_high_pressure_turbulent_channel_flow_59300000.npz',
         ], type=list, help="List of prediction filenames (abspath)")
     parser.add_argument("--spatial_dimension", default=[128,128,128], type=list, help="Spatial discretization, grid of statistics data. Equals the shape of the stored quantities in 'statistic")
     # Min-Max Scaling
     parser.add_argument("--features_limits", 
-        default={'y':[0.0,0.0002],'u':[-0.1,3.5],'TKE_normalized':[0.0,0.2],'vorticity_magn_normalized':[0.0,55.0],'enstrophy_normalized':[0.0,1400.0]},
+        default={'y':[0.0,0.0002],'u':[-0.1,3.5],'v':[-1.0,1.0],'w':[-1.0,1.0],'TKE_normalized':[0.0,0.2],'vorticity_magn_normalized':[0.0,55.0],'enstrophy_normalized':[0.0,1400.0]},
         type=dict, help="features minimum and maximum values, used for data normalization"
     )
     parser.add_argument("--targets_limits", 
