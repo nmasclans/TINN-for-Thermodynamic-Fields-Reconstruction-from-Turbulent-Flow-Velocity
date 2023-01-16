@@ -2,3 +2,4 @@ __pycache__/
 *.png
 
 !/figures/figures_6513607_prediction_from_ckpt_E11/*
+!/figures/figures_6518156_prediction_from_ckpt_E12/*
